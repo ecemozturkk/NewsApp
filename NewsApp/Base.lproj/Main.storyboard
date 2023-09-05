@@ -84,6 +84,14 @@
                                 <buttonConfiguration key="configuration" style="plain" title="Next">
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="nextBtnClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="16U-ZU-9dd"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -99,6 +107,11 @@
                             <constraint firstItem="mTJ-37-TpA" firstAttribute="top" secondItem="ak7-mp-HRm" secondAttribute="bottom" id="wJs-ul-iFf"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="collectionView" destination="ak7-mp-HRm" id="sL1-5b-Thz"/>
+                        <outlet property="nextBtn" destination="zWf-2b-JOQ" id="Jdn-fV-3I2"/>
+                        <outlet property="pageControl" destination="mTJ-37-TpA" id="WYY-yQ-Vej"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
