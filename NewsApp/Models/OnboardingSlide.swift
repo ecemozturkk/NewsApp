@@ -8,7 +8,8 @@
 import UIKit
 
 struct OnboardingSlide {
-    let description: String
+    var description: String
+    let title: String
     let image: UIImage
     
 }

@@ -1,20 +1,23 @@
 //
 //  OnboardingCollectionViewCell.swift
-//  NewsApp
+//  Yummie
 //
-//  Created by Ecem Öztürk on 6.09.2023.
+//  Created by Emmanuel Okwara on 30/01/2021.
 //
 
 import UIKit
 
 class OnboardingCollectionViewCell: UICollectionViewCell {
     
+    static let identifier = String(describing: OnboardingCollectionViewCell.self)
+    
     @IBOutlet weak var slideImageView: UIImageView!
     @IBOutlet weak var slideTitleLbl: UILabel!
+    @IBOutlet weak var slideDescriptionLbl: UILabel!
     
     func setup(_ slide: OnboardingSlide) {
-        // Populating the views
         slideImageView.image = slide.image
-        slideTitleLbl.text = slide.description
+        slideTitleLbl.text = slide.title
+        slideDescriptionLbl.text = slide.description
     }
 }
