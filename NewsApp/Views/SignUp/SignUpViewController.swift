@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 class SignUpViewController: UIViewController {
     
@@ -19,6 +20,18 @@ class SignUpViewController: UIViewController {
     }
     
     @IBAction func signupClicked(_ sender: UIButton) {
+        guard let email = emailTextField.text else {return}
+        guard let password = passwordTextField.text else {return}
+        
+        Auth.auth().createUser(withEmail: email, password: password) { firebaseResult, error in
+            if let e = error {
+                print("error")
+            } else {
+                // Go to home screen
+                self.performSegue(withIdentifier: "goToHome", sender: self)
+            }
+        }
+        
     }
     
 }
