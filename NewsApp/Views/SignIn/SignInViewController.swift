@@ -28,7 +28,11 @@ class SignInViewController: UIViewController {
                 print("error")
             } else {
                 // Go to home screen
-                self.performSegue(withIdentifier: "goToHome", sender: self)
+                //self.performSegue(withIdentifier: "goToHome", sender: self)
+                
+                let main = UIStoryboard(name: "Home", bundle: nil)
+                let second = main.instantiateViewController(withIdentifier: "SecondVC")
+                self.present(second, animated: true, completion: nil)
             }
         }
     }

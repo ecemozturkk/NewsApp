@@ -23,6 +23,11 @@
 		527ABE262AAD0D8200238857 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527ABE252AAD0D8200238857 /* SignUpViewController.swift */; };
 		527ABE282AAD107600238857 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 527ABE272AAD107600238857 /* GoogleService-Info.plist */; };
 		527ABE2B2AAD115E00238857 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 527ABE2A2AAD115E00238857 /* FirebaseAuth */; };
+		527ABE342AADE74600238857 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527ABE332AADE74600238857 /* TabBarViewController.swift */; };
+		527ABE362AADF87B00238857 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 527ABE352AADF87B00238857 /* Home.storyboard */; };
+		527ABE3C2AAE016800238857 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527ABE3B2AAE016800238857 /* FeedViewController.swift */; };
+		527ABE3E2AAE017600238857 /* BookmarksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527ABE3D2AAE017600238857 /* BookmarksViewController.swift */; };
+		527ABE402AAE018200238857 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527ABE3F2AAE018200238857 /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +47,11 @@
 		527ABE232AAD0D7100238857 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		527ABE252AAD0D8200238857 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		527ABE272AAD107600238857 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		527ABE332AADE74600238857 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		527ABE352AADF87B00238857 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		527ABE3B2AAE016800238857 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		527ABE3D2AAE017600238857 /* BookmarksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarksViewController.swift; sourceTree = "<group>"; };
+		527ABE3F2AAE018200238857 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +93,7 @@
 				526D55672AA673A20099E9E8 /* AppDelegate.swift */,
 				526D55692AA673A20099E9E8 /* SceneDelegate.swift */,
 				526D556D2AA673A20099E9E8 /* Main.storyboard */,
+				527ABE352AADF87B00238857 /* Home.storyboard */,
 				526D55702AA673A40099E9E8 /* Assets.xcassets */,
 				526D55752AA673A40099E9E8 /* Info.plist */,
 				527ABE272AAD107600238857 /* GoogleService-Info.plist */,
@@ -93,11 +104,15 @@
 		526D55862AA6899A0099E9E8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				527ABE332AADE74600238857 /* TabBarViewController.swift */,
 				526D55872AA689A00099E9E8 /* Launch */,
 				526D558A2AA7CA650099E9E8 /* Onboarding */,
 				527ABE1D2AACEA0000238857 /* Welcome */,
 				527ABE212AAD0D2700238857 /* SignIn */,
 				527ABE222AAD0D3F00238857 /* SignUp */,
+				527ABE372AAE00E900238857 /* Feed */,
+				527ABE392AAE012400238857 /* Bookmarks */,
+				527ABE3A2AAE013B00238857 /* Profile */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -165,6 +180,30 @@
 				527ABE252AAD0D8200238857 /* SignUpViewController.swift */,
 			);
 			path = SignUp;
+			sourceTree = "<group>";
+		};
+		527ABE372AAE00E900238857 /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				527ABE3B2AAE016800238857 /* FeedViewController.swift */,
+			);
+			path = Feed;
+			sourceTree = "<group>";
+		};
+		527ABE392AAE012400238857 /* Bookmarks */ = {
+			isa = PBXGroup;
+			children = (
+				527ABE3D2AAE017600238857 /* BookmarksViewController.swift */,
+			);
+			path = Bookmarks;
+			sourceTree = "<group>";
+		};
+		527ABE3A2AAE013B00238857 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				527ABE3F2AAE018200238857 /* ProfileViewController.swift */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,6 +275,7 @@
 				526D55742AA673A40099E9E8 /* LaunchScreen.storyboard in Resources */,
 				526D55712AA673A40099E9E8 /* Assets.xcassets in Resources */,
 				527ABE282AAD107600238857 /* GoogleService-Info.plist in Resources */,
+				527ABE362AADF87B00238857 /* Home.storyboard in Resources */,
 				526D55852AA686790099E9E8 /* splash.json in Resources */,
 				526D556F2AA673A20099E9E8 /* Main.storyboard in Resources */,
 			);
@@ -248,13 +288,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				527ABE3E2AAE017600238857 /* BookmarksViewController.swift in Sources */,
 				527ABE1F2AACEA2900238857 /* WelcomeViewController.swift in Sources */,
 				526D55682AA673A20099E9E8 /* AppDelegate.swift in Sources */,
+				527ABE342AADE74600238857 /* TabBarViewController.swift in Sources */,
 				527ABE1A2AAA514400238857 /* OnboardingViewController.swift in Sources */,
 				526D556A2AA673A20099E9E8 /* SceneDelegate.swift in Sources */,
 				527ABE242AAD0D7100238857 /* SignInViewController.swift in Sources */,
 				526D558F2AA7D1480099E9E8 /* UIView+Extension.swift in Sources */,
+				527ABE3C2AAE016800238857 /* FeedViewController.swift in Sources */,
 				527ABE262AAD0D8200238857 /* SignUpViewController.swift in Sources */,
+				527ABE402AAE018200238857 /* ProfileViewController.swift in Sources */,
 				526D55912AA7D30D0099E9E8 /* OnboardingSlide.swift in Sources */,
 				527ABE1C2AAA515300238857 /* OnboardingCollectionViewCell.swift in Sources */,
 			);

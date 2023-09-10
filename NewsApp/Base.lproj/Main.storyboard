@@ -199,20 +199,21 @@
         <!--Sign In View Controller-->
         <scene sceneID="16n-B1-RAN">
             <objects>
-                <viewController id="5bh-q4-4fr" customClass="SignInViewController" customModule="NewsApp" customModuleProvider="target" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NMa-ma-Z0W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewController restorationIdentifier="FirstVC" storyboardIdentifier="FirstVC" id="5bh-q4-4fr" customClass="SignInViewController" customModule="NewsApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aUQ-yL-nag">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="R8N-fC-cet">
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="test@gmail.com" borderStyle="roundedRect" placeholder="Enter email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="R8N-fC-cet">
                                 <rect key="frame" x="55" y="298" width="282" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hkI-hp-1hV">
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="12345678" borderStyle="roundedRect" placeholder="Enter password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hkI-hp-1hV">
                                 <rect key="frame" x="55" y="359" width="282" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" textContentType="password"/>
+                                <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QNu-Rf-sja">
                                 <rect key="frame" x="163" y="748" width="66" height="35"/>
@@ -241,28 +242,10 @@
                     <connections>
                         <outlet property="emailTextField" destination="R8N-fC-cet" id="ZaW-kY-AmF"/>
                         <outlet property="passwordTextField" destination="hkI-hp-1hV" id="X5T-ov-1VS"/>
-                        <segue destination="cQZ-hk-OmX" kind="show" identifier="goToHome" id="Fm9-bW-N3U"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="NMa-ma-Z0W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2533.5877862595421" y="286.61971830985919"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="b2t-ej-ORc">
-            <objects>
-                <viewController id="cQZ-hk-OmX" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Fj2-O7-rO0">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="8Mv-ZN-XLF"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="InH-cg-EZK"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="HQt-lr-bAQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3550" y="665"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="C1f-df-MNs">
@@ -280,7 +263,7 @@
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jDU-g3-HfR">
                                 <rect key="frame" x="55" y="418" width="282" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" textContentType="password"/>
+                                <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mnQ-ok-rXK">
                                 <rect key="frame" x="125" y="734" width="143" height="35"/>
@@ -309,7 +292,6 @@
                     <connections>
                         <outlet property="emailTextField" destination="r7b-Xo-MKj" id="9nj-75-OGs"/>
                         <outlet property="passwordTextField" destination="jDU-g3-HfR" id="kTt-TW-jVX"/>
-                        <segue destination="cQZ-hk-OmX" kind="show" identifier="goToHome" id="ned-pl-FUF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XIv-N7-ByF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -317,9 +299,6 @@
             <point key="canvasLocation" x="2534" y="1085"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="ned-pl-FUF"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
