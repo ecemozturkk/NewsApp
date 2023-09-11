@@ -13,7 +13,7 @@
         <scene sceneID="LaL-7d-1fo">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7fu-gU-Mja" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <tabBarController restorationIdentifier="SecondVC" storyboardIdentifier="SecondVC" modalPresentationStyle="fullScreen" id="G8B-9I-Fgh" customClass="TabBarViewController" customModule="NewsApp" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController restorationIdentifier="HomeVC" storyboardIdentifier="HomeVC" modalPresentationStyle="fullScreen" id="G8B-9I-Fgh" customClass="TabBarViewController" customModule="NewsApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ytL-Cl-JWT">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -117,8 +117,22 @@
                     <view key="view" contentMode="scaleToFill" id="Nxn-Ir-gaT">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Syw-FK-dKZ">
+                                <rect key="frame" x="158" y="408.66666666666669" width="77.333333333333314" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Logout"/>
+                                <connections>
+                                    <action selector="logoutClicked:" destination="53p-aw-Esr" eventType="touchUpInside" id="pCZ-Ce-bTr"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="8qW-Xw-X5o"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Syw-FK-dKZ" firstAttribute="centerY" secondItem="Nxn-Ir-gaT" secondAttribute="centerY" id="iHi-tM-xG8"/>
+                            <constraint firstItem="Syw-FK-dKZ" firstAttribute="centerX" secondItem="Nxn-Ir-gaT" secondAttribute="centerX" id="oTS-lm-4Ww"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="XBp-4g-fKA"/>
                 </viewController>

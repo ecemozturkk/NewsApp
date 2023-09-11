@@ -28,6 +28,7 @@
 		527ABE3C2AAE016800238857 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527ABE3B2AAE016800238857 /* FeedViewController.swift */; };
 		527ABE3E2AAE017600238857 /* BookmarksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527ABE3D2AAE017600238857 /* BookmarksViewController.swift */; };
 		527ABE402AAE018200238857 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527ABE3F2AAE018200238857 /* ProfileViewController.swift */; };
+		527ABE422AAF8BBC00238857 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527ABE412AAF8BBC00238857 /* UIViewController+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		527ABE3B2AAE016800238857 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		527ABE3D2AAE017600238857 /* BookmarksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarksViewController.swift; sourceTree = "<group>"; };
 		527ABE3F2AAE018200238857 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		527ABE412AAF8BBC00238857 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				526D558E2AA7D1480099E9E8 /* UIView+Extension.swift */,
+				527ABE412AAF8BBC00238857 /* UIViewController+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -292,6 +295,7 @@
 				527ABE1F2AACEA2900238857 /* WelcomeViewController.swift in Sources */,
 				526D55682AA673A20099E9E8 /* AppDelegate.swift in Sources */,
 				527ABE342AADE74600238857 /* TabBarViewController.swift in Sources */,
+				527ABE422AAF8BBC00238857 /* UIViewController+Extension.swift in Sources */,
 				527ABE1A2AAA514400238857 /* OnboardingViewController.swift in Sources */,
 				526D556A2AA673A20099E9E8 /* SceneDelegate.swift in Sources */,
 				527ABE242AAD0D7100238857 /* SignInViewController.swift in Sources */,
