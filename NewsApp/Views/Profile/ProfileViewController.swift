@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 class ProfileViewController: UIViewController {
 
@@ -16,14 +17,15 @@ class ProfileViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
+    @IBAction func logoutClicked(_ sender: UIButton) {
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        do {
+            try Auth.auth().signOut()
+            let main = UIStoryboard(name: "Main", bundle: nil)
+            let welcome = main.instantiateViewController(withIdentifier: "WelcomeVC")
+            self.present(welcome, animated: true, completion: nil)
+        } catch {
+            print("logout error")
+        }
     }
-    */
-
 }

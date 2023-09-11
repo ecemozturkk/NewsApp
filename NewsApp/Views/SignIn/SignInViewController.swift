@@ -15,26 +15,36 @@ class SignInViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
     
     @IBAction func loginClicked(_ sender: UIButton) {
-        guard let email = emailTextField.text else {return}
-        guard let password = passwordTextField.text else {return}
         
-        Auth.auth().signIn(withEmail: email, password: password) { firebaseResult, error in
-            if let e = error {
-                print("error")
-            } else {
-                // Go to home screen
-                //self.performSegue(withIdentifier: "goToHome", sender: self)
-                
+        
+        
+        guard let email = emailTextField.text, !email.isEmpty,
+              let password = passwordTextField.text, !password.isEmpty else {
+            makeAlert(titleInput: "Error", messageInput: "Please enter your username and password.")
+            return
+        }
+        
+        if password.count < 8 {
+            makeAlert(titleInput: "Error", messageInput: "Password must be at least 8 characters long.")
+            return
+        }
+        
+        Auth.auth().signIn(withEmail: email, password: password) { [weak self] authData, error in
+            guard let self = self else { return }
+            
+            if let error = error {
+                self.makeAlert(titleInput: "Error", messageInput: error.localizedDescription)
+            } else if let _ = authData {
                 let main = UIStoryboard(name: "Home", bundle: nil)
-                let second = main.instantiateViewController(withIdentifier: "SecondVC")
-                self.present(second, animated: true, completion: nil)
+                let home = main.instantiateViewController(withIdentifier: "HomeVC")
+                self.present(home, animated: true, completion: nil)
             }
         }
     }
-    
 }
+

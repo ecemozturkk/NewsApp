@@ -12,7 +12,7 @@
         <!--Welcome View Controller-->
         <scene sceneID="8lu-1M-QSa">
             <objects>
-                <viewController id="AoX-Ef-lIC" customClass="WelcomeViewController" customModule="NewsApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="WelcomeVC" storyboardIdentifier="WelcomeVC" modalPresentationStyle="fullScreen" id="AoX-Ef-lIC" customClass="WelcomeViewController" customModule="NewsApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YuY-rr-c2w">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
