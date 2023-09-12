@@ -12,7 +12,6 @@
         <!--Tab Bar View Controller-->
         <scene sceneID="LaL-7d-1fo">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="7fu-gU-Mja" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tabBarController restorationIdentifier="HomeVC" storyboardIdentifier="HomeVC" modalPresentationStyle="fullScreen" id="G8B-9I-Fgh" customClass="TabBarViewController" customModule="NewsApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ytL-Cl-JWT">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
@@ -25,13 +24,13 @@
                         <segue destination="r1t-Ii-J8n" kind="relationship" relationship="viewControllers" id="SMp-n1-QMU"/>
                     </connections>
                 </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7fu-gU-Mja" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4097" y="-1204"/>
         </scene>
         <!--Feed-->
         <scene sceneID="lxi-eP-7bm">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="KKZ-b6-ZdP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController id="pFl-0L-bYX" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Feed" id="S50-3I-Fco">
                         <imageReference key="image" image="newspaper.fill" catalog="system" symbolScale="large"/>
@@ -41,41 +40,78 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="fpp-GC-kx9" kind="relationship" relationship="rootViewController" id="Fag-hf-p2K"/>
+                        <segue destination="R3Y-2h-Xoq" kind="relationship" relationship="rootViewController" id="gpG-RJ-kUY"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KKZ-b6-ZdP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3320" y="-425"/>
         </scene>
-        <!--Feed View Controller-->
-        <scene sceneID="R0J-UG-XSl">
+        <!--NEWS-->
+        <scene sceneID="4Qu-cL-t2M">
             <objects>
-                <viewController id="fpp-GC-kx9" customClass="FeedViewController" customModule="NewsApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="ZwV-L8-eVp">
+                <viewController id="R3Y-2h-Xoq" customClass="FeedViewController" customModule="NewsApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qV7-eP-SEC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jyO-yO-4Iu">
-                                <rect key="frame" x="175" y="53" width="42" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Frw-RZ-bog">
+                                <rect key="frame" x="0.0" y="103" width="56" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="56" id="E8i-VA-dLB"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" image="chart.bar.doc.horizontal.fill" catalog="system"/>
+                            </button>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="ZRB-b9-Bi2">
+                                <rect key="frame" x="59" y="103" width="334" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="R3Y-2h-Xoq" id="ft2-y9-vpG"/>
+                                </connections>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="psY-ZF-gMx">
+                                <rect key="frame" x="0.0" y="159" width="393" height="610"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="113" id="9RT-ca-dSI">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="113"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9RT-ca-dSI" id="Kz5-YR-ekv">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="113"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="Ttb-56-Tsh"/>
+                        <viewLayoutGuide key="safeArea" id="RTF-DD-MiL"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="RTF-DD-MiL" firstAttribute="bottom" secondItem="psY-ZF-gMx" secondAttribute="bottom" id="0Yh-Vd-LTM"/>
+                            <constraint firstItem="psY-ZF-gMx" firstAttribute="leading" secondItem="RTF-DD-MiL" secondAttribute="leading" id="5YT-2E-EdK"/>
+                            <constraint firstItem="Frw-RZ-bog" firstAttribute="bottom" secondItem="ZRB-b9-Bi2" secondAttribute="bottom" id="Qun-Zi-Ukp"/>
+                            <constraint firstItem="RTF-DD-MiL" firstAttribute="trailing" secondItem="psY-ZF-gMx" secondAttribute="trailing" id="TfK-qE-87A"/>
+                            <constraint firstItem="ZRB-b9-Bi2" firstAttribute="trailing" secondItem="RTF-DD-MiL" secondAttribute="trailing" id="Y2Y-KJ-vUO"/>
+                            <constraint firstItem="ZRB-b9-Bi2" firstAttribute="leading" secondItem="Frw-RZ-bog" secondAttribute="trailing" constant="3" id="eS4-Cj-22G"/>
+                            <constraint firstItem="psY-ZF-gMx" firstAttribute="top" secondItem="Frw-RZ-bog" secondAttribute="bottom" id="eW4-0V-JBH"/>
+                            <constraint firstItem="ZRB-b9-Bi2" firstAttribute="top" secondItem="RTF-DD-MiL" secondAttribute="top" id="hhD-wg-wX9"/>
+                            <constraint firstItem="Frw-RZ-bog" firstAttribute="top" secondItem="RTF-DD-MiL" secondAttribute="top" id="qAI-nQ-68p"/>
+                            <constraint firstItem="Frw-RZ-bog" firstAttribute="leading" secondItem="RTF-DD-MiL" secondAttribute="leading" id="rCe-xg-c7f"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="F1a-s6-a2Z"/>
+                    <navigationItem key="navigationItem" title="NEWS" id="X58-7N-qaW"/>
+                    <connections>
+                        <outlet property="tableView" destination="psY-ZF-gMx" id="6Cl-Vp-l2p"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="uoI-f6-FSw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aHU-el-4EN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3319.8473282442746" y="335.91549295774649"/>
         </scene>
         <!--Bookmarks-->
         <scene sceneID="pTC-eq-2vz">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="QaE-te-gdY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController id="MdX-fe-2Sq" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Bookmarks" id="NG2-NN-6lS">
                         <imageReference key="image" image="bookmark.square" catalog="system" symbolScale="large"/>
@@ -88,13 +124,13 @@
                         <segue destination="f3r-Zz-gzC" kind="relationship" relationship="rootViewController" id="MR5-I5-ruc"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QaE-te-gdY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4097" y="-425"/>
         </scene>
         <!--Profile-->
         <scene sceneID="t59-ao-lyY">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="F2E-ns-VKS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController id="r1t-Ii-J8n" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Profile" id="Dch-cf-4wI">
                         <imageReference key="image" image="person.fill" catalog="system" symbolScale="large"/>
@@ -107,6 +143,7 @@
                         <segue destination="53p-aw-Esr" kind="relationship" relationship="rootViewController" id="Jmj-F6-CFC"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="F2E-ns-VKS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4879" y="-425"/>
         </scene>
@@ -159,6 +196,7 @@
     </scenes>
     <resources>
         <image name="bookmark.square" catalog="system" width="128" height="114"/>
+        <image name="chart.bar.doc.horizontal.fill" catalog="system" width="115" height="128"/>
         <image name="newspaper.fill" catalog="system" width="128" height="112"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <systemColor name="systemBackgroundColor">
