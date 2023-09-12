@@ -11,5 +11,4 @@ struct OnboardingSlide {
     var description: String
     let title: String
     let image: UIImage
-    
 }
