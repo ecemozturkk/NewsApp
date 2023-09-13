@@ -98,7 +98,7 @@ final class NetworkManager {
     // Setting the default as page one.
     func getArticles(passedInCategory: String, passedInPageNumber: String="1", _ completion: @escaping (Result<[Article]>) -> Void)  {
         let articleRequest = makeRequest(for: .category(categoryIn: passedInCategory, pageNumber: passedInPageNumber))
-//        print(articleRequest)
+        //print(articleRequest)
         
         let task = urlSession.dataTask(with: articleRequest) { (data, response, error) in
             // If error
@@ -108,9 +108,9 @@ final class NetworkManager {
             
             do {
                 // Testing to see if got the proper json back
-                let jsonObject = try JSONSerialization.jsonObject(with: data!, options: [])
-                //                                print(jsonObject)
-                //                                print("\n\n\n\n\n")
+                // let jsonObject = try JSONSerialization.jsonObject(with: data!, options: [])
+                _ = try JSONSerialization.jsonObject(with: data!, options: [])
+                
             } catch {
                 print(error.localizedDescription)
             }
@@ -128,7 +128,8 @@ final class NetworkManager {
             
             DispatchQueue.main.async {
                 completion(Result.success(articles))
-                print("Articles Count: \(result.articles.count)")
+                //print("Articles Count: \(result.articles.count)")
+                //print(result.articles)
             }
         }
         task.resume()
@@ -158,42 +159,4 @@ final class NetworkManager {
         }
         task.resume()
     }
-
-
-    
 }
-
-//final class APICaller {
-//
-//    // singleton
-//    static let shared = APICaller()
-//
-//    struct Constants {
-//        static let topHeadlinesURL = URL(string: "https://newsapi.org/v2/top-headlines?country=us&apiKey=51cfe807e03943b881d6f9642810cae0")
-//    }
-//
-//    private init() {
-//
-//    }
-//
-//    public func getTopStories(completion: @escaping (Result<[String], Error>) -> Void) {
-//        guard let url = Constants.topHeadlinesURL else {
-//            return
-//        }
-//        let task = URLSession.shared.dataTask(with: url) { data, _, error in
-//            if let error = error {
-//                completion(.failure(error))
-//            }
-//            else if let data = data {
-//                do {
-//                    let result = try JSONDecoder().decode(APIResponse.self, from: data)
-//                    print("articles count: \(result.articles.count)")
-//                } catch {
-//                    completion(.failure(error))
-//                }
-//            }
-//
-//        }
-//        task.resume()
-//    }
-//}

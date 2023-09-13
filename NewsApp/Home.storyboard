@@ -74,13 +74,49 @@
                                 <rect key="frame" x="0.0" y="159" width="393" height="610"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="113" id="9RT-ca-dSI">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="feedCell" rowHeight="113" id="9RT-ca-dSI" userLabel="FeedCell" customClass="FeedTableViewCell" customModule="NewsApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="393" height="113"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9RT-ca-dSI" id="Kz5-YR-ekv">
                                             <rect key="frame" x="0.0" y="0.0" width="393" height="113"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Headline" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lCr-9G-4nO">
+                                                    <rect key="frame" x="20" y="16" width="67" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VMX-gI-c2L">
+                                                    <rect key="frame" x="20" y="85" width="31" height="15"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" systemColor="systemGrayColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3DK-rk-pJl">
+                                                    <rect key="frame" x="236" y="5" width="150" height="103"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="150" id="IDB-mx-eC3"/>
+                                                        <constraint firstAttribute="height" constant="100" id="Z7N-12-un6"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="3DK-rk-pJl" secondAttribute="bottom" constant="5" id="0WN-jc-MWo"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="VMX-gI-c2L" secondAttribute="bottom" constant="2" id="9uw-1P-Qqw"/>
+                                                <constraint firstItem="lCr-9G-4nO" firstAttribute="top" secondItem="Kz5-YR-ekv" secondAttribute="topMargin" constant="5" id="Fkn-jo-hSP"/>
+                                                <constraint firstItem="lCr-9G-4nO" firstAttribute="leading" secondItem="Kz5-YR-ekv" secondAttribute="leadingMargin" id="KRh-Ah-kZx"/>
+                                                <constraint firstAttribute="trailing" secondItem="3DK-rk-pJl" secondAttribute="trailing" constant="7" id="LoC-X2-4xF"/>
+                                                <constraint firstItem="3DK-rk-pJl" firstAttribute="top" secondItem="Kz5-YR-ekv" secondAttribute="top" constant="5" id="d7z-ev-uzp"/>
+                                                <constraint firstItem="VMX-gI-c2L" firstAttribute="top" secondItem="lCr-9G-4nO" secondAttribute="bottom" constant="8" id="eeF-du-NSr"/>
+                                                <constraint firstItem="VMX-gI-c2L" firstAttribute="leading" secondItem="Kz5-YR-ekv" secondAttribute="leadingMargin" id="mA0-Ol-f9y"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="headlineImage" destination="3DK-rk-pJl" id="U8r-T2-atU"/>
+                                            <outlet property="headlineLabel" destination="lCr-9G-4nO" id="BRh-4Q-WHv"/>
+                                            <outlet property="headlineSource" destination="VMX-gI-c2L" id="pnL-zm-FTQ"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -102,7 +138,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="NEWS" id="X58-7N-qaW"/>
                     <connections>
-                        <outlet property="tableView" destination="psY-ZF-gMx" id="6Cl-Vp-l2p"/>
+                        <outlet property="feedTableView" destination="psY-ZF-gMx" id="xZI-cj-o9L"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aHU-el-4EN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -204,6 +240,9 @@
         </systemColor>
         <systemColor name="systemGray5Color">
             <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
