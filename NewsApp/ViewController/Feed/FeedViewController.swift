@@ -13,12 +13,17 @@ class FeedViewController: UIViewController {
     
     @IBOutlet weak var feedTableView: UITableView! // headlinesTableView
     
+    @IBOutlet weak var sideMenuBtn: UIBarButtonItem!
+    
     var headlines: [Article] = []
         var currentAPICallPage = 1
         var category: String? = nil
         
         override func viewDidLoad() {
             super.viewDidLoad()
+            
+            sideMenuBtn.target = revealViewController()
+            sideMenuBtn.action = #selector(revealViewController()?.revealSideMenu)
             
             configureTableView()
             fetchArticles()

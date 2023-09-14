@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="G8B-9I-Fgh">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
@@ -28,10 +28,41 @@
             </objects>
             <point key="canvasLocation" x="4097" y="-1204"/>
         </scene>
+        <!--Side Menu View Controller-->
+        <scene sceneID="3XY-Zt-G1k">
+            <objects>
+                <viewController storyboardIdentifier="SideMenuID" id="jyr-U4-d4K" customClass="SideMenuViewController" customModule="NewsApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="J4x-RM-eu0">
+                        <rect key="frame" x="0.0" y="0.0" width="260" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="aKf-GF-dl4">
+                                <rect key="frame" x="0.0" y="59" width="260" height="759"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="yFE-IN-80c"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="aKf-GF-dl4" firstAttribute="leading" secondItem="yFE-IN-80c" secondAttribute="leading" id="1mO-8L-4ZQ"/>
+                            <constraint firstItem="yFE-IN-80c" firstAttribute="bottom" secondItem="aKf-GF-dl4" secondAttribute="bottom" id="XYp-rd-cuL"/>
+                            <constraint firstItem="aKf-GF-dl4" firstAttribute="top" secondItem="yFE-IN-80c" secondAttribute="top" id="ZAT-n7-c4Z"/>
+                            <constraint firstItem="yFE-IN-80c" firstAttribute="trailing" secondItem="aKf-GF-dl4" secondAttribute="trailing" id="bdP-hw-YAW"/>
+                        </constraints>
+                    </view>
+                    <size key="freeformSize" width="260" height="852"/>
+                    <connections>
+                        <outlet property="sideMenuTableView" destination="aKf-GF-dl4" id="Dke-6m-acP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nET-Uj-HJV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3217" y="-1204"/>
+        </scene>
         <!--Feed-->
         <scene sceneID="lxi-eP-7bm">
             <objects>
-                <navigationController id="pFl-0L-bYX" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="HomeNavID" id="pFl-0L-bYX" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Feed" id="S50-3I-Fco">
                         <imageReference key="image" image="newspaper.fill" catalog="system" symbolScale="large"/>
                     </tabBarItem>
@@ -50,21 +81,13 @@
         <!--NEWS-->
         <scene sceneID="4Qu-cL-t2M">
             <objects>
-                <viewController id="R3Y-2h-Xoq" customClass="FeedViewController" customModule="NewsApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FeedID" id="R3Y-2h-Xoq" customClass="FeedViewController" customModule="NewsApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qV7-eP-SEC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Frw-RZ-bog">
-                                <rect key="frame" x="0.0" y="103" width="56" height="56"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="56" id="E8i-VA-dLB"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" image="chart.bar.doc.horizontal.fill" catalog="system"/>
-                            </button>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="ZRB-b9-Bi2">
-                                <rect key="frame" x="59" y="103" width="334" height="56"/>
+                            <searchBar contentMode="redraw" placeholder="Search for news.." translatesAutoresizingMaskIntoConstraints="NO" id="ZRB-b9-Bi2">
+                                <rect key="frame" x="0.0" y="103" width="393" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <outlet property="delegate" destination="R3Y-2h-Xoq" id="ft2-y9-vpG"/>
@@ -126,19 +149,19 @@
                         <constraints>
                             <constraint firstItem="RTF-DD-MiL" firstAttribute="bottom" secondItem="psY-ZF-gMx" secondAttribute="bottom" id="0Yh-Vd-LTM"/>
                             <constraint firstItem="psY-ZF-gMx" firstAttribute="leading" secondItem="RTF-DD-MiL" secondAttribute="leading" id="5YT-2E-EdK"/>
-                            <constraint firstItem="Frw-RZ-bog" firstAttribute="bottom" secondItem="ZRB-b9-Bi2" secondAttribute="bottom" id="Qun-Zi-Ukp"/>
                             <constraint firstItem="RTF-DD-MiL" firstAttribute="trailing" secondItem="psY-ZF-gMx" secondAttribute="trailing" id="TfK-qE-87A"/>
                             <constraint firstItem="ZRB-b9-Bi2" firstAttribute="trailing" secondItem="RTF-DD-MiL" secondAttribute="trailing" id="Y2Y-KJ-vUO"/>
-                            <constraint firstItem="ZRB-b9-Bi2" firstAttribute="leading" secondItem="Frw-RZ-bog" secondAttribute="trailing" constant="3" id="eS4-Cj-22G"/>
-                            <constraint firstItem="psY-ZF-gMx" firstAttribute="top" secondItem="Frw-RZ-bog" secondAttribute="bottom" id="eW4-0V-JBH"/>
+                            <constraint firstItem="ZRB-b9-Bi2" firstAttribute="leading" secondItem="psY-ZF-gMx" secondAttribute="leading" id="ddn-PU-xte"/>
+                            <constraint firstItem="psY-ZF-gMx" firstAttribute="top" secondItem="ZRB-b9-Bi2" secondAttribute="bottom" id="hGg-jq-gzG"/>
                             <constraint firstItem="ZRB-b9-Bi2" firstAttribute="top" secondItem="RTF-DD-MiL" secondAttribute="top" id="hhD-wg-wX9"/>
-                            <constraint firstItem="Frw-RZ-bog" firstAttribute="top" secondItem="RTF-DD-MiL" secondAttribute="top" id="qAI-nQ-68p"/>
-                            <constraint firstItem="Frw-RZ-bog" firstAttribute="leading" secondItem="RTF-DD-MiL" secondAttribute="leading" id="rCe-xg-c7f"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="NEWS" id="X58-7N-qaW"/>
+                    <navigationItem key="navigationItem" title="NEWS" id="X58-7N-qaW">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="folder.fill.badge.questionmark.ar" catalog="system" id="c5c-vG-X52"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="feedTableView" destination="psY-ZF-gMx" id="xZI-cj-o9L"/>
+                        <outlet property="sideMenuBtn" destination="c5c-vG-X52" id="Ylb-5E-ng0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aHU-el-4EN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -148,7 +171,7 @@
         <!--Bookmarks-->
         <scene sceneID="pTC-eq-2vz">
             <objects>
-                <navigationController id="MdX-fe-2Sq" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="BookmarkID" id="MdX-fe-2Sq" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Bookmarks" id="NG2-NN-6lS">
                         <imageReference key="image" image="bookmark.square" catalog="system" symbolScale="large"/>
                     </tabBarItem>
@@ -167,7 +190,7 @@
         <!--Profile-->
         <scene sceneID="t59-ao-lyY">
             <objects>
-                <navigationController id="r1t-Ii-J8n" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="ProfileID" id="r1t-Ii-J8n" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Profile" id="Dch-cf-4wI">
                         <imageReference key="image" image="person.fill" catalog="system" symbolScale="large"/>
                     </tabBarItem>
@@ -232,7 +255,7 @@
     </scenes>
     <resources>
         <image name="bookmark.square" catalog="system" width="128" height="114"/>
-        <image name="chart.bar.doc.horizontal.fill" catalog="system" width="115" height="128"/>
+        <image name="folder.fill.badge.questionmark.ar" catalog="system" width="128" height="92"/>
         <image name="newspaper.fill" catalog="system" width="128" height="112"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <systemColor name="systemBackgroundColor">
