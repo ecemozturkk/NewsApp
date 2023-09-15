@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import Kingfisher
 
 class FeedDetailViewController: UIViewController {
     
@@ -15,8 +14,17 @@ class FeedDetailViewController: UIViewController {
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var sourceLabel: UILabel!
     @IBOutlet weak var contentLabel: UILabel!
-    
+
     var article: Article?
+    
+    init(article: Article) {
+        self.article = article
+        super.init(nibName: "FeedDetailViewController", bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,8 +45,8 @@ class FeedDetailViewController: UIViewController {
         }
         
     }
-    
-    
-    
-    
+
+
+
+
 }

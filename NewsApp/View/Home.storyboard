@@ -81,7 +81,7 @@
         <!--Feed Detail View Controller-->
         <scene sceneID="yNd-xH-zAc">
             <objects>
-                <viewController restorationIdentifier="FeedDetailViewController" storyboardIdentifier="FeedDetailViewController" id="CDC-1A-IWH" customClass="FeedDetailViewController" customModule="NewsApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FeedDetailViewController" id="CDC-1A-IWH" customClass="FeedDetailViewController" customModule="NewsApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="v6l-lf-DJJ">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -75,11 +75,9 @@ extension FeedViewController: UITableViewDelegate, UITableViewDataSource {
         let selectedArticle = headlines[indexPath.row]
         showFeedDetailViewController(with: selectedArticle)
     }
+
     func showFeedDetailViewController(with article: Article) {
-        let storyboard = UIStoryboard(name: "Home", bundle: nil) // Storyboard adınızı kullanabilirsiniz
-        if let feedDetailVC = storyboard.instantiateViewController(withIdentifier: "FeedDetailViewController") as? FeedDetailViewController {
-            feedDetailVC.article = article
-            self.navigationController?.pushViewController(feedDetailVC, animated: true)
-        }
+        let feedDetailVC = FeedDetailViewController(article: article)
+        self.navigationController?.pushViewController(feedDetailVC, animated: true)
     }
 }

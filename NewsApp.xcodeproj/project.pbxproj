@@ -15,7 +15,8 @@
 		5233D64B2AB261E200A2349C /* SideMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5233D6492AB261E200A2349C /* SideMenuCell.swift */; };
 		5233D64C2AB261E200A2349C /* SideMenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5233D64A2AB261E200A2349C /* SideMenuCell.xib */; };
 		5233D64E2AB261FF00A2349C /* SideMenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5233D64D2AB261FF00A2349C /* SideMenuModel.swift */; };
-		5233D6542AB487AD00A2349C /* FeedDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5233D6532AB487AD00A2349C /* FeedDetailViewController.swift */; };
+		5233D6572AB4CFBA00A2349C /* FeedDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5233D6552AB4CFBA00A2349C /* FeedDetailViewController.swift */; };
+		5233D6582AB4CFBA00A2349C /* FeedDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5233D6562AB4CFBA00A2349C /* FeedDetailViewController.xib */; };
 		526D55682AA673A20099E9E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526D55672AA673A20099E9E8 /* AppDelegate.swift */; };
 		526D556A2AA673A20099E9E8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526D55692AA673A20099E9E8 /* SceneDelegate.swift */; };
 		526D556F2AA673A20099E9E8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 526D556D2AA673A20099E9E8 /* Main.storyboard */; };
@@ -47,7 +48,8 @@
 		5233D6492AB261E200A2349C /* SideMenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuCell.swift; sourceTree = "<group>"; };
 		5233D64A2AB261E200A2349C /* SideMenuCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SideMenuCell.xib; sourceTree = "<group>"; };
 		5233D64D2AB261FF00A2349C /* SideMenuModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuModel.swift; sourceTree = "<group>"; };
-		5233D6532AB487AD00A2349C /* FeedDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedDetailViewController.swift; sourceTree = "<group>"; };
+		5233D6552AB4CFBA00A2349C /* FeedDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedDetailViewController.swift; sourceTree = "<group>"; };
+		5233D6562AB4CFBA00A2349C /* FeedDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedDetailViewController.xib; sourceTree = "<group>"; };
 		526D55642AA673A20099E9E8 /* NewsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		526D55672AA673A20099E9E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		526D55692AA673A20099E9E8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -143,7 +145,8 @@
 		5233D6522AB4878C00A2349C /* FeedDetail */ = {
 			isa = PBXGroup;
 			children = (
-				5233D6532AB487AD00A2349C /* FeedDetailViewController.swift */,
+				5233D6552AB4CFBA00A2349C /* FeedDetailViewController.swift */,
+				5233D6562AB4CFBA00A2349C /* FeedDetailViewController.xib */,
 			);
 			path = FeedDetail;
 			sourceTree = "<group>";
@@ -341,6 +344,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				526D55742AA673A40099E9E8 /* LaunchScreen.storyboard in Resources */,
+				5233D6582AB4CFBA00A2349C /* FeedDetailViewController.xib in Resources */,
 				526D55712AA673A40099E9E8 /* Assets.xcassets in Resources */,
 				527ABE282AAD107600238857 /* GoogleService-Info.plist in Resources */,
 				527ABE362AADF87B00238857 /* Home.storyboard in Resources */,
@@ -358,6 +362,7 @@
 			files = (
 				527ABE3E2AAE017600238857 /* BookmarksViewController.swift in Sources */,
 				527ABE1F2AACEA2900238857 /* WelcomeViewController.swift in Sources */,
+				5233D6572AB4CFBA00A2349C /* FeedDetailViewController.swift in Sources */,
 				526D55682AA673A20099E9E8 /* AppDelegate.swift in Sources */,
 				522C7EE32AB0882500460EC7 /* FeedTableViewCell.swift in Sources */,
 				527ABE342AADE74600238857 /* TabBarViewController.swift in Sources */,
@@ -375,7 +380,6 @@
 				522C7EE52AB0F08700460EC7 /* Article.swift in Sources */,
 				522C7EDF2AB0788A00460EC7 /* NetworkManager.swift in Sources */,
 				5233D6432AB25FD300A2349C /* SideMenuViewController.swift in Sources */,
-				5233D6542AB487AD00A2349C /* FeedDetailViewController.swift in Sources */,
 				527ABE1C2AAA515300238857 /* OnboardingCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
