@@ -78,65 +78,6 @@
             </objects>
             <point key="canvasLocation" x="3320" y="-425"/>
         </scene>
-        <!--Feed Detail View Controller-->
-        <scene sceneID="yNd-xH-zAc">
-            <objects>
-                <viewController storyboardIdentifier="FeedDetailViewController" id="CDC-1A-IWH" customClass="FeedDetailViewController" customModule="NewsApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="v6l-lf-DJJ">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vDm-zU-u2d">
-                                <rect key="frame" x="76" y="111" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="NEWS TITLE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T4F-OW-0OJ">
-                                <rect key="frame" x="16" y="288" width="361" height="64"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="10-10-2020" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RR3-iA-TAP">
-                                <rect key="frame" x="16" y="360" width="91" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Source" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="anK-ei-uYX">
-                                <rect key="frame" x="335" y="360" width="54" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="17" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XPH-LW-7G6">
-                                <rect key="frame" x="16" y="402" width="361" height="308"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <mutableString key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vel lacus quis quam maximus blandit. Mauris a risus diam. Vivamus quis interdum ex. Phasellus lorem urna, ornare quis purus vel, tincidunt elementum nibh. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Ut placerat luctus enim, sit amet faucibus augue hendrerit sit amet. Nulla tincidunt augue lorem. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vestibulum porta, dui a tincidunt iaculis, massa massa tincidunt neque, et interdum diam elit a nisl.
-
-Vestibulum bibendum risus ac diam consectetur fermentum. Pellentesque eget auctor sem, in malesuada velit. Ut vitae neque vitae odio facilisis pellentesque. Nulla facilisi. Duis iaculis augue ac augue condimentum imperdiet. In laoreet quis odio id consequat. Cras at odio metus. Proin fringilla suscipit efficitur.</mutableString>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="f7i-2L-aub"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <connections>
-                        <outlet property="contentLabel" destination="XPH-LW-7G6" id="fS5-cx-66m"/>
-                        <outlet property="dateLabel" destination="RR3-iA-TAP" id="STI-Uf-jYz"/>
-                        <outlet property="imageView" destination="vDm-zU-u2d" id="xZa-mo-zQN"/>
-                        <outlet property="sourceLabel" destination="anK-ei-uYX" id="Uxe-0F-OFT"/>
-                        <outlet property="titleLabel" destination="T4F-OW-0OJ" id="w4t-5p-Hv4"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="nuT-sQ-sAw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2556.4885496183206" y="335.91549295774649"/>
-        </scene>
         <!--NEWS-->
         <scene sceneID="4Qu-cL-t2M">
             <objects>
@@ -315,19 +256,30 @@ Vestibulum bibendum risus ac diam consectetur fermentum. Pellentesque eget aucto
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NCL-ZW-s47">
-                                                    <rect key="frame" x="160" y="47" width="42" height="21"/>
+                                                    <rect key="frame" x="162" y="47" width="42" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Uqd-hl-M5s">
+                                                    <rect key="frame" x="2" y="2" width="150" height="111"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="111" id="eCh-VK-YAn"/>
+                                                        <constraint firstAttribute="width" constant="150" id="sla-b6-hAy"/>
+                                                    </constraints>
+                                                </imageView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="NCL-ZW-s47" firstAttribute="leading" secondItem="f8d-vX-4iS" secondAttribute="leading" constant="160" id="1ni-uh-crh"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="NCL-ZW-s47" secondAttribute="bottom" constant="36" id="Ecg-ed-qUi"/>
-                                                <constraint firstItem="NCL-ZW-s47" firstAttribute="top" secondItem="f8d-vX-4iS" secondAttribute="topMargin" constant="36" id="qsX-yn-cI6"/>
+                                                <constraint firstItem="NCL-ZW-s47" firstAttribute="leading" secondItem="Uqd-hl-M5s" secondAttribute="trailing" constant="10" id="9Rm-Ew-e4y"/>
+                                                <constraint firstItem="Uqd-hl-M5s" firstAttribute="leading" secondItem="f8d-vX-4iS" secondAttribute="leading" constant="2" id="Pv7-9p-ZxV"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="NCL-ZW-s47" secondAttribute="bottom" constant="36" id="SBH-1Y-naO"/>
+                                                <constraint firstAttribute="bottom" secondItem="Uqd-hl-M5s" secondAttribute="bottom" constant="2" id="dcy-vR-pfT"/>
+                                                <constraint firstItem="Uqd-hl-M5s" firstAttribute="top" secondItem="f8d-vX-4iS" secondAttribute="top" constant="2" id="gUf-RL-69i"/>
+                                                <constraint firstItem="NCL-ZW-s47" firstAttribute="top" secondItem="f8d-vX-4iS" secondAttribute="topMargin" constant="36" id="xhC-9X-Zxq"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="bookmarkImageView" destination="Uqd-hl-M5s" id="WFj-XC-xHI"/>
                                             <outlet property="bookmarkLabel" destination="NCL-ZW-s47" id="b2h-Dx-xBG"/>
                                         </connections>
                                     </tableViewCell>

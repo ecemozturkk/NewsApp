@@ -113,6 +113,7 @@
 				526D556D2AA673A20099E9E8 /* Main.storyboard */,
 				527ABE352AADF87B00238857 /* Home.storyboard */,
 				526D55722AA673A40099E9E8 /* LaunchScreen.storyboard */,
+				5233D6562AB4CFBA00A2349C /* FeedDetailViewController.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -148,7 +149,6 @@
 			isa = PBXGroup;
 			children = (
 				5233D6552AB4CFBA00A2349C /* FeedDetailViewController.swift */,
-				5233D6562AB4CFBA00A2349C /* FeedDetailViewController.xib */,
 			);
 			path = FeedDetail;
 			sourceTree = "<group>";

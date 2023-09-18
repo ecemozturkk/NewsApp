@@ -78,7 +78,7 @@
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="plain" title="Add To Your Bookmarks"/>
                     <connections>
-                        <action selector="addToBookmarksClicked:" destination="-1" eventType="touchUpInside" id="iNv-aN-fBt"/>
+                        <action selector="addToBookmarksClicked:" destination="-1" eventType="touchUpInside" id="Ki0-z1-FDk"/>
                     </connections>
                 </button>
             </subviews>
