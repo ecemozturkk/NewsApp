@@ -163,13 +163,13 @@ Vestibulum bibendum risus ac diam consectetur fermentum. Pellentesque eget aucto
                                             <rect key="frame" x="0.0" y="0.0" width="393" height="113"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Headline" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lCr-9G-4nO">
-                                                    <rect key="frame" x="20" y="16" width="67" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Headline" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lCr-9G-4nO">
+                                                    <rect key="frame" x="20" y="16" width="67" height="61"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VMX-gI-c2L">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VMX-gI-c2L">
                                                     <rect key="frame" x="20" y="85" width="31" height="15"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <color key="textColor" systemColor="systemGrayColor"/>
@@ -302,14 +302,55 @@ Vestibulum bibendum risus ac diam consectetur fermentum. Pellentesque eget aucto
                     <view key="view" contentMode="scaleToFill" id="Wti-98-AFS">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="RRP-Ps-sqQ">
+                                <rect key="frame" x="0.0" y="103" width="393" height="666"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="bookmarkCell" rowHeight="115" id="SAy-oL-5Cl" customClass="BookmarksTableViewCell" customModule="NewsApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="115"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="SAy-oL-5Cl" id="f8d-vX-4iS">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="115"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NCL-ZW-s47">
+                                                    <rect key="frame" x="160" y="47" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="NCL-ZW-s47" firstAttribute="leading" secondItem="f8d-vX-4iS" secondAttribute="leading" constant="160" id="1ni-uh-crh"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="NCL-ZW-s47" secondAttribute="bottom" constant="36" id="Ecg-ed-qUi"/>
+                                                <constraint firstItem="NCL-ZW-s47" firstAttribute="top" secondItem="f8d-vX-4iS" secondAttribute="topMargin" constant="36" id="qsX-yn-cI6"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="bookmarkLabel" destination="NCL-ZW-s47" id="b2h-Dx-xBG"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="ecg-hQ-BEk"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="RRP-Ps-sqQ" firstAttribute="leading" secondItem="ecg-hQ-BEk" secondAttribute="leading" id="550-Km-lc1"/>
+                            <constraint firstItem="ecg-hQ-BEk" firstAttribute="trailing" secondItem="RRP-Ps-sqQ" secondAttribute="trailing" id="haC-6J-BJX"/>
+                            <constraint firstItem="RRP-Ps-sqQ" firstAttribute="top" secondItem="ecg-hQ-BEk" secondAttribute="top" id="lpg-fp-T3v"/>
+                            <constraint firstItem="ecg-hQ-BEk" firstAttribute="bottom" secondItem="RRP-Ps-sqQ" secondAttribute="bottom" id="yqH-cH-JPP"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ly8-Q4-WZt"/>
+                    <connections>
+                        <outlet property="tableView" destination="RRP-Ps-sqQ" id="jGv-7B-RaT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dPH-15-rVG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4097" y="336"/>
+            <point key="canvasLocation" x="4096.9465648854957" y="335.91549295774649"/>
         </scene>
     </scenes>
     <resources>
