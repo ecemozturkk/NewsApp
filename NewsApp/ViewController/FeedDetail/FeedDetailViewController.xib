@@ -10,9 +10,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FeedDetailViewController" customModule="NewsApp" customModuleProvider="target">
             <connections>
+                <outlet property="addToBookmarksBtn" destination="vi3-Rc-TkM" id="jq1-Qn-mbi"/>
                 <outlet property="contentLabel" destination="XG8-By-0Mf" id="y5X-k1-Ihp"/>
                 <outlet property="dateLabel" destination="c4I-e1-h6y" id="bXk-7G-AND"/>
                 <outlet property="imageView" destination="VT1-lY-b9P" id="l4n-HJ-2Lo"/>
+                <outlet property="seeMoreDetailBtn" destination="bNt-SS-gdW" id="7zg-NE-uaO"/>
                 <outlet property="sourceLabel" destination="zkS-tA-fNJ" id="6DC-DZ-rd5"/>
                 <outlet property="titleLabel" destination="Yk6-Rf-8hJ" id="BQa-2s-JTm"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -62,6 +64,23 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bNt-SS-gdW">
+                    <rect key="frame" x="91" y="560.33333333333337" width="211" height="35"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="See More Detail"/>
+                    <connections>
+                        <action selector="seeMoreDetailClicked:" destination="-1" eventType="touchUpInside" id="oVh-5d-SG8"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vi3-Rc-TkM">
+                    <rect key="frame" x="91" y="603" width="211" height="35"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Add To Your Bookmarks"/>
+                    <connections>
+                        <action selector="addToBookmarksClicked:" destination="-1" eventType="touchUpInside" id="iNv-aN-fBt"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -74,11 +93,14 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="c4I-e1-h6y" secondAttribute="trailing" constant="16" id="IWF-gP-VJj"/>
                 <constraint firstItem="VT1-lY-b9P" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Jui-Ly-J9T"/>
                 <constraint firstItem="XG8-By-0Mf" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="OJ7-Yn-z5n"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="bNt-SS-gdW" secondAttribute="trailing" constant="91" id="S7i-fv-wfF"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="XG8-By-0Mf" secondAttribute="trailing" constant="16" id="TfK-PA-e0Z"/>
                 <constraint firstItem="zkS-tA-fNJ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="Wol-Qn-vyL"/>
                 <constraint firstItem="Yk6-Rf-8hJ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="aHy-Rq-I7A"/>
                 <constraint firstItem="zkS-tA-fNJ" firstAttribute="top" secondItem="VT1-lY-b9P" secondAttribute="bottom" constant="8" id="ek4-mk-NS7"/>
                 <constraint firstItem="c4I-e1-h6y" firstAttribute="top" secondItem="VT1-lY-b9P" secondAttribute="bottom" constant="8" id="igA-tU-QI4"/>
+                <constraint firstItem="bNt-SS-gdW" firstAttribute="top" secondItem="XG8-By-0Mf" secondAttribute="bottom" constant="50" id="sZo-19-8j5"/>
+                <constraint firstItem="bNt-SS-gdW" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="91" id="vaF-pJ-hg2"/>
                 <constraint firstItem="XG8-By-0Mf" firstAttribute="top" secondItem="Yk6-Rf-8hJ" secondAttribute="bottom" constant="20" id="vaU-ZS-rXr"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>

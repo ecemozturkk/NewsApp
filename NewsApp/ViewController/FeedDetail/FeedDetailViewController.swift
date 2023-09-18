@@ -14,12 +14,17 @@ class FeedDetailViewController: UIViewController {
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var sourceLabel: UILabel!
     @IBOutlet weak var contentLabel: UILabel!
-
+    
+    @IBOutlet weak var seeMoreDetailBtn: UIButton!
+    @IBOutlet weak var addToBookmarksBtn: UIButton!
+    
+    
     var article: Article?
     
     init(article: Article) {
         self.article = article
         super.init(nibName: "FeedDetailViewController", bundle: nil)
+        
     }
     
     required init?(coder: NSCoder) {
@@ -45,8 +50,13 @@ class FeedDetailViewController: UIViewController {
         }
         
     }
-
-
-
+    
+    @IBAction func seeMoreDetailClicked(_ sender: UIButton) {
+    }
+    
+    
+    @IBAction func addToBookmarksClicked(_ sender: UIButton) {
+    }
+    
 
 }
