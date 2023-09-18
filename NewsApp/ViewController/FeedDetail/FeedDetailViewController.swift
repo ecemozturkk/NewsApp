@@ -56,33 +56,6 @@ class FeedDetailViewController: UIViewController {
     
     
     @IBAction func addToBookmarksClicked(_ sender: UIButton) {
-//
-//        if let article = article {
-//               var bookmarks = UserDefaults.standard.array(forKey: "bookmarks") as? [[String: Any]] ?? []
-//
-//               if !isArticleAlreadyBookmarked(article, in: bookmarks) {
-//                   var articleData: [String: Any] = [
-//                       "title": article.title ?? "Article Title",
-//                       "sourceName": article.source.name ?? "Article Source Name",
-//                       "publishedAt": article.publishedAt ?? "Article Published At",
-//                       "content": article.content ?? "Article Content"
-//                   ]
-//
-//                   // Görseli Data türüne dönüştürün
-//                   if let imageUrlString = article.urlToImage, let imageUrl = URL(string: imageUrlString), let imageData = try? Data(contentsOf: imageUrl) {
-//                       articleData["imageData"] = imageData
-//                   }
-//
-//                   bookmarks.append(articleData)
-//
-//                   UserDefaults.standard.set(bookmarks, forKey: "bookmarks")
-//                   UserDefaults.standard.synchronize()
-//                   makeAlert(titleInput: "Success", messageInput: "New is added to your bookmarks.")
-//               } else {
-//                   // Haber zaten eklenmişse kullanıcıya bir uyarı verin
-//                   makeAlert(titleInput: "Warning", messageInput: "New is already added in bookmarks.")
-//               }
-//           }
         if let article = article {
             var bookmarks = UserDefaults.standard.array(forKey: "bookmarks") as? [[String: Any]] ?? []
 

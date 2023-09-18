@@ -57,9 +57,58 @@ class BookmarksViewController: UIViewController, UITableViewDataSource, UITableV
             }
 
             return cell
-        
-
     }
-    
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+
+        // İndeks yeterince büyükse, bookmark dizisinden seçilen veriyi alın
+        guard indexPath.row < bookmarks.count else {
+            return
+        }
+
+        let selectedBookmark = bookmarks[indexPath.row]
+
+        // Haber işaretiyle FeedDetailViewController'ı göster
+        showFeedDetailViewController(with: selectedBookmark)
+    }
+
+
+    func showFeedDetailViewController(with bookmark: [String: Any]) {
+        guard let article = createArticleFromBookmark(bookmark) else {
+            return
+        }
+
+        let feedDetailVC = FeedDetailViewController(article: article)
+        self.navigationController?.pushViewController(feedDetailVC, animated: true)
+    }
+
+   
+    func createArticleFromBookmark(_ bookmark: [String: Any]) -> Article? {
+        guard let title = bookmark["title"] as? String,
+              let sourceName = bookmark["sourceName"] as? String,
+              let publishedAt = bookmark["publishedAt"] as? String,
+              let content = bookmark["content"] as? String,
+              let urlToImage = bookmark["imageUrl"] as? String else {
+            return nil // Eğer gereken veriler eksikse, nil döndürün.
+        }
+        
+        // Source oluşturun
+        let source = Source(id: nil, name: sourceName)
+
+        // Article nesnesini oluşturun ve doldurun
+        let article = Article(
+            source: source,
+            author: nil,
+            title: title,
+            description: nil,
+            url: nil,
+            urlToImage: urlToImage,
+            content: content,
+            publishedAt: publishedAt
+        )
+        
+        return article
+    }
+
+
 }
