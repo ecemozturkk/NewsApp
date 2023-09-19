@@ -19,31 +19,100 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="0hm-jM-bP1">
-                                <rect key="frame" x="125.33333333333333" y="377.66666666666669" width="142.33333333333337" height="96.666666666666686"/>
+                                <rect key="frame" x="50.000000000000014" y="414" width="236.33333333333337" height="24"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wOK-Ee-Yps">
-                                        <rect key="frame" x="38.333333333333321" y="0.0" width="65.666666666666686" height="34.333333333333336"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Login"/>
-                                        <connections>
-                                            <segue destination="5bh-q4-4fr" kind="show" id="oua-CX-XbT"/>
-                                        </connections>
-                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's dive in into your account!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="owz-5d-KEV">
+                                        <rect key="frame" x="0.0" y="0.0" width="236.33333333333334" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="24" id="W2F-Nm-Xo4"/>
+                                            <constraint firstAttribute="width" constant="236.33000000000001" id="hL0-xi-UNZ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="KohinoorBangla-Regular" family="Kohinoor Bangla" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="owz-5d-KEV" secondAttribute="trailing" id="TYw-b9-KxK"/>
+                                    <constraint firstItem="owz-5d-KEV" firstAttribute="leading" secondItem="0hm-jM-bP1" secondAttribute="leading" id="eM3-J0-XET"/>
+                                </constraints>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="letter-n" translatesAutoresizingMaskIntoConstraints="NO" id="PLi-zo-Pw2">
+                                <rect key="frame" x="76" y="119" width="240" height="138"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="6rC-7e-uuk"/>
+                                    <constraint firstAttribute="height" constant="138" id="Jxv-Lu-vmx"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lMJ-CV-E6f">
+                                <rect key="frame" x="80.666666666666686" y="344" width="175" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="7gP-Qz-fxS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="45"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="soE-B7-SVm">
+                                <rect key="frame" x="18.666666666666657" y="676" width="299" height="36"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't have an account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FR8-QH-zSK">
+                                        <rect key="frame" x="0.0" y="0.0" width="177" height="36"/>
+                                        <fontDescription key="fontDescription" name="KohinoorBangla-Regular" family="Kohinoor Bangla" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tBf-3h-6MO">
-                                        <rect key="frame" x="0.0" y="62.333333333333314" width="142.33333333333334" height="34.333333333333343"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Create Account"/>
+                                        <rect key="frame" x="182" y="0.0" width="117" height="36"/>
+                                        <fontDescription key="fontDescription" name="KohinoorBangla-Regular" family="Kohinoor Bangla" pointSize="17"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Create Account">
+                                            <color key="titleColor" red="0.20081345014666724" green="0.42092803030303028" blue="0.39723336937788534" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
                                         <connections>
                                             <segue destination="pik-i0-97K" kind="show" id="Dr3-go-cdT"/>
                                         </connections>
                                     </button>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="299" id="kBe-ON-kvV"/>
+                                </constraints>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wOK-Ee-Yps">
+                                <rect key="frame" x="80" y="608" width="176" height="45"/>
+                                <color key="backgroundColor" name="greenTheme"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="4DO-De-AOM"/>
+                                    <constraint firstAttribute="width" constant="232" id="RTG-JQ-JRu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="KohinoorBangla-Semibold" family="Kohinoor Bangla" pointSize="17"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Sign in with password">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="5bh-q4-4fr" kind="show" id="oua-CX-XbT"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="TzB-cN-R0b"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="soE-B7-SVm" firstAttribute="centerX" secondItem="TzB-cN-R0b" secondAttribute="centerX" id="1Gy-PR-gK5"/>
                             <constraint firstItem="0hm-jM-bP1" firstAttribute="centerY" secondItem="YuY-rr-c2w" secondAttribute="centerY" id="3M2-d1-j8I"/>
+                            <constraint firstItem="lMJ-CV-E6f" firstAttribute="centerX" secondItem="TzB-cN-R0b" secondAttribute="centerX" id="K1J-on-1tT"/>
+                            <constraint firstItem="PLi-zo-Pw2" firstAttribute="leading" secondItem="TzB-cN-R0b" secondAttribute="leading" constant="76" id="Syq-XS-8sN"/>
+                            <constraint firstItem="lMJ-CV-E6f" firstAttribute="top" secondItem="PLi-zo-Pw2" secondAttribute="bottom" constant="87" id="Tro-fh-5za"/>
+                            <constraint firstItem="wOK-Ee-Yps" firstAttribute="centerX" secondItem="TzB-cN-R0b" secondAttribute="centerX" id="afK-4K-kvp"/>
+                            <constraint firstItem="wOK-Ee-Yps" firstAttribute="leading" secondItem="TzB-cN-R0b" secondAttribute="leading" constant="80" id="haA-yn-Jzu"/>
+                            <constraint firstItem="soE-B7-SVm" firstAttribute="top" secondItem="wOK-Ee-Yps" secondAttribute="bottom" constant="23" id="hgf-lE-QmL"/>
+                            <constraint firstItem="wOK-Ee-Yps" firstAttribute="top" secondItem="0hm-jM-bP1" secondAttribute="bottom" constant="170" id="pPa-hF-Knf"/>
+                            <constraint firstItem="PLi-zo-Pw2" firstAttribute="top" secondItem="YuY-rr-c2w" secondAttribute="topMargin" constant="16" id="sSm-rC-aej"/>
                             <constraint firstItem="0hm-jM-bP1" firstAttribute="centerX" secondItem="YuY-rr-c2w" secondAttribute="centerX" id="zzv-SA-3bY"/>
                         </constraints>
                     </view>
@@ -302,6 +371,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="letter-n" width="512" height="512"/>
         <namedColor name="greenTheme">
             <color red="0.098039215686274508" green="0.59999999999999998" blue="0.55686274509803924" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
