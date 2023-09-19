@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		52292E6D2ABA50F4004406DD /* FeedDetailWebKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52292E6C2ABA50F4004406DD /* FeedDetailWebKit.swift */; };
 		522C7EDF2AB0788A00460EC7 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522C7EDE2AB0788A00460EC7 /* NetworkManager.swift */; };
 		522C7EE32AB0882500460EC7 /* FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522C7EE22AB0882500460EC7 /* FeedTableViewCell.swift */; };
 		522C7EE52AB0F08700460EC7 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522C7EE42AB0F08700460EC7 /* Article.swift */; };
@@ -42,6 +43,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		52292E6C2ABA50F4004406DD /* FeedDetailWebKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedDetailWebKit.swift; sourceTree = "<group>"; };
 		522C7EDE2AB0788A00460EC7 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		522C7EE22AB0882500460EC7 /* FeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewCell.swift; sourceTree = "<group>"; };
 		522C7EE42AB0F08700460EC7 /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
@@ -149,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				5233D6552AB4CFBA00A2349C /* FeedDetailViewController.swift */,
+				52292E6C2ABA50F4004406DD /* FeedDetailWebKit.swift */,
 			);
 			path = FeedDetail;
 			sourceTree = "<group>";
@@ -369,6 +372,7 @@
 				526D55682AA673A20099E9E8 /* AppDelegate.swift in Sources */,
 				522C7EE32AB0882500460EC7 /* FeedTableViewCell.swift in Sources */,
 				5233D65A2AB8E2B900A2349C /* BookmarksTableViewCell.swift in Sources */,
+				52292E6D2ABA50F4004406DD /* FeedDetailWebKit.swift in Sources */,
 				527ABE342AADE74600238857 /* TabBarViewController.swift in Sources */,
 				527ABE422AAF8BBC00238857 /* UIViewController+Extension.swift in Sources */,
 				5233D64E2AB261FF00A2349C /* SideMenuModel.swift in Sources */,

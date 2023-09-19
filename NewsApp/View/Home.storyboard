@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -16,7 +17,15 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ytL-Cl-JWT">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                        <color key="backgroundColor" name="lightGreenTheme"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" name="greenTheme"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="unselectedItemTintColor">
+                                <color key="value" systemColor="systemGrayColor"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </tabBar>
                     <connections>
                         <segue destination="pFl-0L-bYX" kind="relationship" relationship="viewControllers" id="aes-SS-z1u"/>
@@ -104,35 +113,52 @@
                                             <rect key="frame" x="0.0" y="0.0" width="393" height="113"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Headline" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lCr-9G-4nO">
-                                                    <rect key="frame" x="20" y="16" width="67" height="61"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Headline" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lCr-9G-4nO">
+                                                    <rect key="frame" x="20" y="16" width="208" height="61"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="61" id="6uN-kn-a6w"/>
+                                                        <constraint firstAttribute="width" constant="208" id="sq2-lp-Qfr"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="KohinoorBangla-Regular" family="Kohinoor Bangla" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VMX-gI-c2L">
-                                                    <rect key="frame" x="20" y="85" width="31" height="15"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                    <color key="textColor" systemColor="systemGrayColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3DK-rk-pJl">
-                                                    <rect key="frame" x="236" y="5" width="150" height="103"/>
+                                                    <rect key="frame" x="251" y="5" width="135" height="103"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="150" id="IDB-mx-eC3"/>
+                                                        <constraint firstAttribute="width" constant="135" id="IDB-mx-eC3"/>
                                                         <constraint firstAttribute="height" constant="100" id="Z7N-12-un6"/>
                                                     </constraints>
                                                 </imageView>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="newspaper" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="17N-B2-69l">
+                                                    <rect key="frame" x="20" y="85.333333333333329" width="13" height="12.666666666666671"/>
+                                                    <color key="tintColor" systemColor="systemGrayColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="13" id="ecW-bb-y02"/>
+                                                        <constraint firstAttribute="width" constant="13" id="uoa-y4-hC4"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VMX-gI-c2L">
+                                                    <rect key="frame" x="36" y="85" width="70" height="14"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="14" id="LdN-uK-XiY"/>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="sic-ba-0TZ"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="KohinoorBangla-Semibold" family="Kohinoor Bangla" pointSize="10"/>
+                                                    <color key="textColor" systemColor="systemGrayColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="bottom" secondItem="3DK-rk-pJl" secondAttribute="bottom" constant="5" id="0WN-jc-MWo"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="VMX-gI-c2L" secondAttribute="bottom" constant="2" id="9uw-1P-Qqw"/>
+                                                <constraint firstItem="VMX-gI-c2L" firstAttribute="leading" secondItem="17N-B2-69l" secondAttribute="trailing" constant="3" id="4f2-K4-xTq"/>
+                                                <constraint firstItem="17N-B2-69l" firstAttribute="leading" secondItem="Kz5-YR-ekv" secondAttribute="leadingMargin" id="6qh-Pa-yzU"/>
                                                 <constraint firstItem="lCr-9G-4nO" firstAttribute="top" secondItem="Kz5-YR-ekv" secondAttribute="topMargin" constant="5" id="Fkn-jo-hSP"/>
                                                 <constraint firstItem="lCr-9G-4nO" firstAttribute="leading" secondItem="Kz5-YR-ekv" secondAttribute="leadingMargin" id="KRh-Ah-kZx"/>
+                                                <constraint firstItem="17N-B2-69l" firstAttribute="top" secondItem="lCr-9G-4nO" secondAttribute="bottom" constant="8" id="LQk-SM-2Hd"/>
                                                 <constraint firstAttribute="trailing" secondItem="3DK-rk-pJl" secondAttribute="trailing" constant="7" id="LoC-X2-4xF"/>
                                                 <constraint firstItem="3DK-rk-pJl" firstAttribute="top" secondItem="Kz5-YR-ekv" secondAttribute="top" constant="5" id="d7z-ev-uzp"/>
-                                                <constraint firstItem="VMX-gI-c2L" firstAttribute="top" secondItem="lCr-9G-4nO" secondAttribute="bottom" constant="8" id="eeF-du-NSr"/>
-                                                <constraint firstItem="VMX-gI-c2L" firstAttribute="leading" secondItem="Kz5-YR-ekv" secondAttribute="leadingMargin" id="mA0-Ol-f9y"/>
+                                                <constraint firstItem="VMX-gI-c2L" firstAttribute="top" secondItem="lCr-9G-4nO" secondAttribute="bottom" constant="8" id="u4F-fO-M9E"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -157,7 +183,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="NEWS" id="X58-7N-qaW">
-                        <barButtonItem key="leftBarButtonItem" title="Item" image="folder.fill.badge.questionmark.ar" catalog="system" id="c5c-vG-X52"/>
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="square.grid.2x2" catalog="system" id="c5c-vG-X52">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="feedTableView" destination="psY-ZF-gMx" id="xZI-cj-o9L"/>
@@ -206,7 +234,7 @@
             </objects>
             <point key="canvasLocation" x="4879" y="-425"/>
         </scene>
-        <!--Profile View Controller-->
+        <!--PROFILE-->
         <scene sceneID="NBC-2f-wYi">
             <objects>
                 <viewController id="53p-aw-Esr" customClass="ProfileViewController" customModule="NewsApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -230,13 +258,13 @@
                             <constraint firstItem="Syw-FK-dKZ" firstAttribute="centerX" secondItem="Nxn-Ir-gaT" secondAttribute="centerX" id="oTS-lm-4Ww"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="XBp-4g-fKA"/>
+                    <navigationItem key="navigationItem" title="PROFILE" id="XBp-4g-fKA"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CNs-1x-Z2B" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4879" y="336"/>
         </scene>
-        <!--Bookmarks View Controller-->
+        <!--BOOKMARKS-->
         <scene sceneID="rWH-Cb-ExC">
             <objects>
                 <viewController id="f3r-Zz-gzC" customClass="BookmarksViewController" customModule="NewsApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -295,7 +323,7 @@
                             <constraint firstItem="ecg-hQ-BEk" firstAttribute="bottom" secondItem="RRP-Ps-sqQ" secondAttribute="bottom" id="yqH-cH-JPP"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="ly8-Q4-WZt"/>
+                    <navigationItem key="navigationItem" title="BOOKMARKS" id="ly8-Q4-WZt"/>
                     <connections>
                         <outlet property="tableView" destination="RRP-Ps-sqQ" id="jGv-7B-RaT"/>
                     </connections>
@@ -307,14 +335,18 @@
     </scenes>
     <resources>
         <image name="bookmark.square" catalog="system" width="128" height="114"/>
-        <image name="folder.fill.badge.questionmark.ar" catalog="system" width="128" height="92"/>
+        <image name="newspaper" catalog="system" width="128" height="111"/>
         <image name="newspaper.fill" catalog="system" width="128" height="112"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
+        <image name="square.grid.2x2" catalog="system" width="128" height="114"/>
+        <namedColor name="greenTheme">
+            <color red="0.098039215686274508" green="0.59999999999999998" blue="0.55686274509803924" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="lightGreenTheme">
+            <color red="0.94117647058823528" green="0.98431372549019602" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGray5Color">
-            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGrayColor">
             <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

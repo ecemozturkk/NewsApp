@@ -52,6 +52,12 @@ class FeedDetailViewController: UIViewController {
     }
     
     @IBAction func seeMoreDetailClicked(_ sender: UIButton) {
+        if let article = article, let url = article.url {
+               let webKitViewController = FeedDetailWebKit()
+               webKitViewController.url = url
+               navigationController?.pushViewController(webKitViewController, animated: true)
+           }
+        
     }
     
     
