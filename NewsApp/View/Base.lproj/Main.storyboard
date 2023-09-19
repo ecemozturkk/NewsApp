@@ -275,37 +275,127 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="test@gmail.com" borderStyle="roundedRect" placeholder="Enter email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="R8N-fC-cet">
-                                <rect key="frame" x="55" y="298" width="282" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="test@gmail.com" borderStyle="roundedRect" placeholder="Enter email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="R8N-fC-cet">
+                                <rect key="frame" x="58" y="400" width="287" height="34"/>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="1Bh-Su-D1I"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="287" id="2eJ-oR-Iau"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="KohinoorBangla-Regular" family="Kohinoor Bangla" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="12345678" borderStyle="roundedRect" placeholder="Enter password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hkI-hp-1hV">
-                                <rect key="frame" x="55" y="359" width="282" height="34"/>
+                                <rect key="frame" x="58" y="504" width="287" height="34"/>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="7Eq-bw-jFy"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="287" id="x4M-xo-NtL"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QNu-Rf-sja">
-                                <rect key="frame" x="163" y="748" width="66" height="35"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Login"/>
+                                <rect key="frame" x="33" y="741" width="332" height="42"/>
+                                <color key="backgroundColor" name="greenTheme"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="332" id="Ppl-8J-ur3"/>
+                                    <constraint firstAttribute="height" constant="42" id="ghn-yl-x2d"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="KohinoorBangla-Semibold" family="Kohinoor Bangla" pointSize="17"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Sign in">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="loginClicked:" destination="5bh-q4-4fr" eventType="touchUpInside" id="ViP-FL-Zsr"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome back!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZEr-tT-Vvd">
+                                <rect key="frame" x="16" y="138" width="361" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="ZEC-9A-WWI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="KohinoorBangla-Semibold" family="Kohinoor Bangla" pointSize="31"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter your email &amp; password to sign in." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2As-uR-uIw">
+                                <rect key="frame" x="16" y="198" width="349" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="I9F-pC-Xax"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="349" id="k13-J6-eZI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="systemGrayColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GV1-pb-DIS">
+                                <rect key="frame" x="58" y="366" width="45" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="45" id="Drd-gf-pFB"/>
+                                    <constraint firstAttribute="height" constant="21" id="cJa-15-2Gf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="envelope.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="P5P-W0-ofN">
+                                <rect key="frame" x="16" y="402.33333333333331" width="34" height="30"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="Pkl-Ao-APq"/>
+                                    <constraint firstAttribute="width" constant="34" id="zf4-KE-N3p"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lock.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="HFI-D9-MZd">
+                                <rect key="frame" x="16" y="504" width="34" height="32"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="34" id="BdD-QZ-Fw7"/>
+                                    <constraint firstAttribute="height" constant="34" id="qit-dS-sVw"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ldt-Ma-22U">
+                                <rect key="frame" x="58" y="470" width="80" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="QpL-Zd-t7A"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="QpL-Zd-t7A" firstAttribute="trailing" secondItem="R8N-fC-cet" secondAttribute="trailing" constant="56" id="1lF-CC-pjg"/>
-                            <constraint firstItem="R8N-fC-cet" firstAttribute="leading" secondItem="QpL-Zd-t7A" secondAttribute="leading" constant="55" id="34W-ce-xFQ"/>
-                            <constraint firstItem="QpL-Zd-t7A" firstAttribute="trailing" secondItem="hkI-hp-1hV" secondAttribute="trailing" constant="56" id="64U-PG-H6W"/>
-                            <constraint firstItem="hkI-hp-1hV" firstAttribute="top" secondItem="R8N-fC-cet" secondAttribute="bottom" constant="27" id="AQA-eJ-CV2"/>
-                            <constraint firstItem="QpL-Zd-t7A" firstAttribute="bottom" secondItem="QNu-Rf-sja" secondAttribute="bottom" constant="35" id="DiM-1h-ZBi"/>
-                            <constraint firstItem="QNu-Rf-sja" firstAttribute="leading" secondItem="QpL-Zd-t7A" secondAttribute="leading" constant="163" id="QjB-VZ-ml0"/>
-                            <constraint firstItem="hkI-hp-1hV" firstAttribute="leading" secondItem="QpL-Zd-t7A" secondAttribute="leading" constant="55" id="SQs-nG-kmw"/>
-                            <constraint firstItem="R8N-fC-cet" firstAttribute="top" secondItem="QpL-Zd-t7A" secondAttribute="top" constant="195" id="ll8-N3-ocZ"/>
-                            <constraint firstItem="QpL-Zd-t7A" firstAttribute="trailing" secondItem="QNu-Rf-sja" secondAttribute="trailing" constant="164" id="wQV-J4-Kcl"/>
+                            <constraint firstItem="P5P-W0-ofN" firstAttribute="top" secondItem="2As-uR-uIw" secondAttribute="bottom" constant="181" id="4uH-Kz-BpY"/>
+                            <constraint firstItem="R8N-fC-cet" firstAttribute="top" secondItem="GV1-pb-DIS" secondAttribute="bottom" constant="13" id="5JZ-nz-dxf"/>
+                            <constraint firstItem="2As-uR-uIw" firstAttribute="top" secondItem="ZEr-tT-Vvd" secondAttribute="bottom" constant="16" id="94V-gg-sNo"/>
+                            <constraint firstItem="GV1-pb-DIS" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="QpL-Zd-t7A" secondAttribute="leading" id="9vY-MU-Ryn"/>
+                            <constraint firstItem="QpL-Zd-t7A" firstAttribute="bottom" secondItem="QNu-Rf-sja" secondAttribute="bottom" constant="35" id="CM8-pr-B8D"/>
+                            <constraint firstItem="ldt-Ma-22U" firstAttribute="top" secondItem="R8N-fC-cet" secondAttribute="bottom" constant="36" id="FIa-Le-2vg"/>
+                            <constraint firstItem="QpL-Zd-t7A" firstAttribute="trailing" secondItem="2As-uR-uIw" secondAttribute="trailing" constant="28" id="HGW-kq-stB"/>
+                            <constraint firstItem="2As-uR-uIw" firstAttribute="leading" secondItem="QpL-Zd-t7A" secondAttribute="leading" constant="16" id="IxE-bj-N4Y"/>
+                            <constraint firstItem="QNu-Rf-sja" firstAttribute="trailing" secondItem="2As-uR-uIw" secondAttribute="trailing" id="Knr-5v-2Nt"/>
+                            <constraint firstItem="HFI-D9-MZd" firstAttribute="top" secondItem="P5P-W0-ofN" secondAttribute="bottom" constant="69" id="MaA-6T-L3T"/>
+                            <constraint firstItem="QpL-Zd-t7A" firstAttribute="trailing" secondItem="ldt-Ma-22U" secondAttribute="trailing" constant="255" id="NZi-h5-DPO"/>
+                            <constraint firstItem="hkI-hp-1hV" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="HFI-D9-MZd" secondAttribute="trailing" constant="8" symbolic="YES" id="PjO-QL-z2l"/>
+                            <constraint firstItem="QNu-Rf-sja" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="QpL-Zd-t7A" secondAttribute="leading" symbolic="YES" id="Up3-yO-9jt"/>
+                            <constraint firstItem="GV1-pb-DIS" firstAttribute="top" secondItem="2As-uR-uIw" secondAttribute="bottom" constant="147" id="YNE-wZ-8Q4"/>
+                            <constraint firstItem="QpL-Zd-t7A" firstAttribute="trailing" secondItem="hkI-hp-1hV" secondAttribute="trailing" constant="48" id="cc4-8K-UY3"/>
+                            <constraint firstItem="HFI-D9-MZd" firstAttribute="leading" secondItem="QpL-Zd-t7A" secondAttribute="leading" constant="16" id="eCn-1w-BKv"/>
+                            <constraint firstItem="P5P-W0-ofN" firstAttribute="leading" secondItem="QpL-Zd-t7A" secondAttribute="leading" constant="16" id="eDx-yu-iQT"/>
+                            <constraint firstItem="ldt-Ma-22U" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="QpL-Zd-t7A" secondAttribute="leading" id="eSv-Th-IJa"/>
+                            <constraint firstItem="QpL-Zd-t7A" firstAttribute="trailing" secondItem="R8N-fC-cet" secondAttribute="trailing" constant="48" id="nDa-ao-sgv"/>
+                            <constraint firstItem="ZEr-tT-Vvd" firstAttribute="top" secondItem="QpL-Zd-t7A" secondAttribute="top" constant="35" id="nM2-9R-ngA"/>
+                            <constraint firstItem="hkI-hp-1hV" firstAttribute="top" secondItem="ldt-Ma-22U" secondAttribute="bottom" constant="13" id="pLl-1B-fft"/>
+                            <constraint firstItem="R8N-fC-cet" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="P5P-W0-ofN" secondAttribute="trailing" constant="8" symbolic="YES" id="qLZ-qB-GLT"/>
+                            <constraint firstItem="ZEr-tT-Vvd" firstAttribute="leading" secondItem="QpL-Zd-t7A" secondAttribute="leading" constant="16" id="xsM-Lf-IPL"/>
+                            <constraint firstItem="QpL-Zd-t7A" firstAttribute="trailing" secondItem="ZEr-tT-Vvd" secondAttribute="trailing" constant="16" id="zse-0d-hyg"/>
+                            <constraint firstItem="QpL-Zd-t7A" firstAttribute="trailing" secondItem="GV1-pb-DIS" secondAttribute="trailing" constant="290" id="zsi-bo-hMa"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="cLQ-HV-1U5"/>
@@ -371,7 +461,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="envelope.fill" catalog="system" width="128" height="93"/>
         <image name="letter-n" width="512" height="512"/>
+        <image name="lock.fill" catalog="system" width="125" height="128"/>
         <namedColor name="greenTheme">
             <color red="0.098039215686274508" green="0.59999999999999998" blue="0.55686274509803924" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
@@ -380,6 +472,12 @@
         </systemColor>
         <systemColor name="systemGray4Color">
             <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
