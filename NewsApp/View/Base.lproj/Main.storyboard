@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dep-T9-cul">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dZW-fu-BAO">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -132,17 +133,18 @@
                             </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kkj-ua-cro">
                                 <rect key="frame" x="121.66666666666669" y="728" width="150" height="50"/>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.71128531679999996" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" name="greenTheme"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="8Cz-0L-Onv"/>
                                     <constraint firstAttribute="height" constant="50" id="rWN-ld-o1Y"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                 <state key="normal" title="Next">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="10"/>
+                                        <real key="value" value="20"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
@@ -151,8 +153,8 @@
                             </button>
                             <pageControl opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="5Du-xo-1i8">
                                 <rect key="frame" x="138.66666666666666" y="686" width="115.66666666666666" height="26"/>
-                                <color key="pageIndicatorTintColor" systemColor="systemGray5Color"/>
-                                <color key="currentPageIndicatorTintColor" red="0.87320786709999998" green="0.23044547439999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="pageIndicatorTintColor" systemColor="systemGray4Color"/>
+                                <color key="currentPageIndicatorTintColor" name="greenTheme"/>
                             </pageControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="rN2-VE-43E"/>
@@ -199,7 +201,6 @@
         <!--Sign In View Controller-->
         <scene sceneID="16n-B1-RAN">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="NMa-ma-Z0W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController restorationIdentifier="FirstVC" storyboardIdentifier="FirstVC" id="5bh-q4-4fr" customClass="SignInViewController" customModule="NewsApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aUQ-yL-nag">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
@@ -244,6 +245,7 @@
                         <outlet property="passwordTextField" destination="hkI-hp-1hV" id="X5T-ov-1VS"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NMa-ma-Z0W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2533.5877862595421" y="286.61971830985919"/>
         </scene>
@@ -300,11 +302,14 @@
         </scene>
     </scenes>
     <resources>
+        <namedColor name="greenTheme">
+            <color red="0.098039215686274508" green="0.59999999999999998" blue="0.55686274509803924" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-        <systemColor name="systemGray5Color">
-            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemGray4Color">
+            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
