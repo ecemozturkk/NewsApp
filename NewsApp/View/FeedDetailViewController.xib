@@ -3,6 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -26,88 +27,156 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VT1-lY-b9P">
-                    <rect key="frame" x="16" y="59" width="361" height="209"/>
+                    <rect key="frame" x="16" y="75" width="360" height="210"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="361" id="gI2-lx-DHC"/>
-                        <constraint firstAttribute="height" constant="209" id="gJE-25-miA"/>
+                        <constraint firstAttribute="height" constant="210" id="Ahg-Cx-7oH"/>
+                        <constraint firstAttribute="width" constant="360" id="HXT-jj-TtU"/>
                     </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CNN" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zkS-tA-fNJ">
-                    <rect key="frame" x="15.999999999999996" y="276" width="33.666666666666657" height="25"/>
+                    <rect key="frame" x="50" y="299" width="150" height="21"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="25" id="u6D-oH-amG"/>
+                        <constraint firstAttribute="height" constant="21" id="gaL-80-BhU"/>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="iwA-8I-fwv"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                    <fontDescription key="fontDescription" name="KohinoorBangla-Semibold" family="Kohinoor Bangla" pointSize="15"/>
                     <color key="textColor" systemColor="systemGrayColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10-10-2020" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c4I-e1-h6y">
-                    <rect key="frame" x="242" y="276" width="135" height="25"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="19.09.2023 23:23" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c4I-e1-h6y">
+                    <rect key="frame" x="215" y="299" width="128" height="25"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="25" id="BeW-pv-nKI"/>
-                        <constraint firstAttribute="width" constant="135" id="oJo-L2-qgW"/>
+                        <constraint firstAttribute="width" constant="128" id="rsl-VD-H1l"/>
+                        <constraint firstAttribute="height" constant="25" id="yuu-9M-2UT"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <fontDescription key="fontDescription" name="KohinoorBangla-Semibold" family="Kohinoor Bangla" pointSize="15"/>
                     <color key="textColor" systemColor="systemGrayColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5 takeaways from Cowboys' 40-0 drubbing of Giants on Sunday Night Football - NBC 5 Dallas-Fort Worth" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yk6-Rf-8hJ">
-                    <rect key="frame" x="16" y="317" width="361" height="71.666666666666686"/>
-                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                    <rect key="frame" x="16" y="328" width="361" height="130"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="80" id="nvz-pf-bP7"/>
+                        <constraint firstAttribute="height" constant="130" id="oPW-Eb-XDd"/>
+                        <constraint firstAttribute="width" constant="361" id="u6b-ZE-7WD"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="24"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="12" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XG8-By-0Mf">
-                    <rect key="frame" x="16" y="408.66666666666669" width="361" height="101.66666666666669"/>
+                    <rect key="frame" x="16" y="458" width="361" height="162"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="361" id="ASn-L9-bZD"/>
+                        <constraint firstAttribute="height" constant="162" id="JZO-8a-yH4"/>
+                    </constraints>
                     <string key="text">Rain wasn't the only thing that poured on the New York Giants Sunday night. Dallas Cowboys running back Tony Pollard jogged into the endzone on a one-yard touchdown run. Jogged. The scoreboard ballo… [+2994 chars]</string>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <fontDescription key="fontDescription" name="KohinoorBangla-Regular" family="Kohinoor Bangla" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bNt-SS-gdW">
-                    <rect key="frame" x="91" y="560.33333333333337" width="211" height="35"/>
-                    <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="plain" title="See More Detail"/>
-                    <connections>
-                        <action selector="seeMoreDetailClicked:" destination="-1" eventType="touchUpInside" id="oVh-5d-SG8"/>
-                    </connections>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vi3-Rc-TkM">
-                    <rect key="frame" x="91" y="603" width="211" height="35"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="plain" title="Add To Your Bookmarks"/>
-                    <connections>
-                        <action selector="addToBookmarksClicked:" destination="-1" eventType="touchUpInside" id="Ki0-z1-FDk"/>
-                    </connections>
-                </button>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="newspaper.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="MlF-zF-snx">
+                    <rect key="frame" x="16" y="294" width="30" height="28.666666666666686"/>
+                    <color key="tintColor" name="greenTheme"/>
+                    <constraints>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="30" id="Vgm-TQ-YHK"/>
+                        <constraint firstAttribute="height" constant="30" id="uvE-Hv-0nA"/>
+                    </constraints>
+                </imageView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calendar.badge.clock" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="FbN-YH-CfC">
+                    <rect key="frame" x="347" y="294.66666666666669" width="31.333333333333314" height="28.666666666666686"/>
+                    <color key="tintColor" name="greenTheme"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="30" id="Y3M-OX-00A"/>
+                        <constraint firstAttribute="height" constant="30" id="xmF-f7-TiO"/>
+                    </constraints>
+                </imageView>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="g65-YX-joh">
+                    <rect key="frame" x="62" y="620" width="250" height="95"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bNt-SS-gdW">
+                            <rect key="frame" x="0.0" y="0.0" width="250" height="40"/>
+                            <color key="backgroundColor" name="greenTheme"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="250" id="NA9-Ml-0iZ"/>
+                                <constraint firstAttribute="height" constant="40" id="Qe0-hN-BIQ"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="KohinoorBangla-Semibold" family="Kohinoor Bangla" pointSize="15"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="See More Detail">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="10"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="seeMoreDetailClicked:" destination="-1" eventType="touchUpInside" id="oVh-5d-SG8"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vi3-Rc-TkM">
+                            <rect key="frame" x="0.0" y="55" width="250" height="40"/>
+                            <color key="backgroundColor" name="greenTheme"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="DkU-f1-NzL"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="KohinoorBangla-Semibold" family="Kohinoor Bangla" pointSize="15"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="Add To Your Bookmarks">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="10"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="addToBookmarksClicked:" destination="-1" eventType="touchUpInside" id="Ki0-z1-FDk"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="0.0"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </stackView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <accessibility key="accessibilityConfiguration" identifier="FeedDetailViewController"/>
             <constraints>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="VT1-lY-b9P" secondAttribute="trailing" constant="16" id="1zj-88-aNS"/>
-                <constraint firstItem="Yk6-Rf-8hJ" firstAttribute="top" secondItem="zkS-tA-fNJ" secondAttribute="bottom" constant="16" id="2S7-5U-OGo"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Yk6-Rf-8hJ" secondAttribute="trailing" constant="16" id="3rR-PG-hsx"/>
-                <constraint firstItem="VT1-lY-b9P" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="5ko-pi-4cu"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="c4I-e1-h6y" secondAttribute="trailing" constant="16" id="IWF-gP-VJj"/>
-                <constraint firstItem="VT1-lY-b9P" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Jui-Ly-J9T"/>
-                <constraint firstItem="XG8-By-0Mf" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="OJ7-Yn-z5n"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="bNt-SS-gdW" secondAttribute="trailing" constant="91" id="S7i-fv-wfF"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="XG8-By-0Mf" secondAttribute="trailing" constant="16" id="TfK-PA-e0Z"/>
-                <constraint firstItem="zkS-tA-fNJ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="Wol-Qn-vyL"/>
-                <constraint firstItem="Yk6-Rf-8hJ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="aHy-Rq-I7A"/>
-                <constraint firstItem="zkS-tA-fNJ" firstAttribute="top" secondItem="VT1-lY-b9P" secondAttribute="bottom" constant="8" id="ek4-mk-NS7"/>
-                <constraint firstItem="c4I-e1-h6y" firstAttribute="top" secondItem="VT1-lY-b9P" secondAttribute="bottom" constant="8" id="igA-tU-QI4"/>
-                <constraint firstItem="bNt-SS-gdW" firstAttribute="top" secondItem="XG8-By-0Mf" secondAttribute="bottom" constant="50" id="sZo-19-8j5"/>
-                <constraint firstItem="bNt-SS-gdW" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="91" id="vaF-pJ-hg2"/>
-                <constraint firstItem="XG8-By-0Mf" firstAttribute="top" secondItem="Yk6-Rf-8hJ" secondAttribute="bottom" constant="20" id="vaU-ZS-rXr"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Yk6-Rf-8hJ" secondAttribute="trailing" constant="16" id="7fL-3K-Jxn"/>
+                <constraint firstItem="MlF-zF-snx" firstAttribute="top" secondItem="VT1-lY-b9P" secondAttribute="bottom" constant="8" id="B8e-Mu-HEe"/>
+                <constraint firstItem="FbN-YH-CfC" firstAttribute="leading" secondItem="c4I-e1-h6y" secondAttribute="trailing" constant="4" id="CDa-2D-qd9"/>
+                <constraint firstItem="c4I-e1-h6y" firstAttribute="leading" secondItem="zkS-tA-fNJ" secondAttribute="trailing" constant="15" id="Elm-Ae-mN8"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="FbN-YH-CfC" secondAttribute="trailing" constant="16" id="Kii-qF-3iv"/>
+                <constraint firstItem="VT1-lY-b9P" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="Kou-NT-5B8"/>
+                <constraint firstItem="zkS-tA-fNJ" firstAttribute="top" secondItem="VT1-lY-b9P" secondAttribute="bottom" constant="14" id="M5h-hn-P9k"/>
+                <constraint firstItem="XG8-By-0Mf" firstAttribute="top" secondItem="Yk6-Rf-8hJ" secondAttribute="bottom" id="RS2-NQ-WKB"/>
+                <constraint firstItem="FbN-YH-CfC" firstAttribute="top" secondItem="VT1-lY-b9P" secondAttribute="bottom" constant="8" id="SgC-9b-m2d"/>
+                <constraint firstItem="MlF-zF-snx" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="SyS-nc-7qa"/>
+                <constraint firstItem="g65-YX-joh" firstAttribute="top" secondItem="XG8-By-0Mf" secondAttribute="bottom" id="U3V-E5-Pwi"/>
+                <constraint firstItem="Yk6-Rf-8hJ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="UrR-WE-aIs"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="XG8-By-0Mf" secondAttribute="trailing" constant="16" id="VaF-Bu-RzM"/>
+                <constraint firstItem="Yk6-Rf-8hJ" firstAttribute="top" secondItem="c4I-e1-h6y" secondAttribute="bottom" constant="4" id="YKT-sB-cHg"/>
+                <constraint firstItem="c4I-e1-h6y" firstAttribute="top" secondItem="VT1-lY-b9P" secondAttribute="bottom" constant="14" id="hez-dR-T2A"/>
+                <constraint firstItem="XG8-By-0Mf" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="meY-p7-XxA"/>
+                <constraint firstItem="g65-YX-joh" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="62" id="qSK-JI-4sL"/>
+                <constraint firstItem="zkS-tA-fNJ" firstAttribute="leading" secondItem="MlF-zF-snx" secondAttribute="trailing" constant="4" id="wXD-rs-FiD"/>
+                <constraint firstItem="VT1-lY-b9P" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="16" id="y1E-mW-COs"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="58.778625954198468" y="19.718309859154932"/>
+            <point key="canvasLocation" x="58.778625954198468" y="-4.9295774647887329"/>
         </view>
     </objects>
     <resources>
+        <image name="calendar.badge.clock" catalog="system" width="128" height="108"/>
+        <image name="newspaper.circle" catalog="system" width="128" height="123"/>
+        <namedColor name="greenTheme">
+            <color red="0.098039215686274508" green="0.59999999999999998" blue="0.55686274509803924" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

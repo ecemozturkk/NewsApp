@@ -127,6 +127,7 @@
                                                 </label>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3DK-rk-pJl">
                                                     <rect key="frame" x="251" y="5" width="135" height="103"/>
+                                                    <color key="backgroundColor" name="colorBackground"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="135" id="IDB-mx-eC3"/>
                                                         <constraint firstAttribute="height" constant="100" id="Z7N-12-un6"/>
@@ -248,16 +249,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Syw-FK-dKZ">
-                                <rect key="frame" x="158" y="408.66666666666669" width="77.333333333333314" height="35"/>
+                                <rect key="frame" x="158" y="408.66666666666669" width="77.333333333333314" height="34.666666666666686"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Logout"/>
                                 <connections>
                                     <action selector="logoutClicked:" destination="53p-aw-Esr" eventType="touchUpInside" id="pCZ-Ce-bTr"/>
                                 </connections>
                             </button>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1Ng-hh-pKH">
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1Ng-hh-pKH">
                                 <rect key="frame" x="172" y="353" width="49" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="sPa-hs-D7G"/>
+                                </constraints>
                                 <connections>
                                     <action selector="switchThemeValueChanged:" destination="53p-aw-Esr" eventType="valueChanged" id="vRG-W8-62S"/>
                                 </connections>
@@ -266,8 +269,11 @@
                         <viewLayoutGuide key="safeArea" id="8qW-Xw-X5o"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="1Ng-hh-pKH" firstAttribute="centerX" secondItem="Syw-FK-dKZ" secondAttribute="centerX" id="GrU-wh-KC8"/>
                             <constraint firstItem="Syw-FK-dKZ" firstAttribute="centerY" secondItem="Nxn-Ir-gaT" secondAttribute="centerY" id="iHi-tM-xG8"/>
+                            <constraint firstItem="Syw-FK-dKZ" firstAttribute="top" secondItem="1Ng-hh-pKH" secondAttribute="bottom" constant="24.666666666666686" id="iev-tf-IC3"/>
                             <constraint firstItem="Syw-FK-dKZ" firstAttribute="centerX" secondItem="Nxn-Ir-gaT" secondAttribute="centerX" id="oTS-lm-4Ww"/>
+                            <constraint firstItem="1Ng-hh-pKH" firstAttribute="top" secondItem="8qW-Xw-X5o" secondAttribute="top" constant="250" id="wlv-hD-lc3"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="XBp-4g-fKA"/>

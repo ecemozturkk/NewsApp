@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		52292E6D2ABA50F4004406DD /* FeedDetailWebKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52292E6C2ABA50F4004406DD /* FeedDetailWebKit.swift */; };
+		52292E6F2ABB64E8004406DD /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52292E6E2ABB64E8004406DD /* DateFormatter.swift */; };
 		522C7EDF2AB0788A00460EC7 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522C7EDE2AB0788A00460EC7 /* NetworkManager.swift */; };
 		522C7EE32AB0882500460EC7 /* FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522C7EE22AB0882500460EC7 /* FeedTableViewCell.swift */; };
 		522C7EE52AB0F08700460EC7 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522C7EE42AB0F08700460EC7 /* Article.swift */; };
@@ -44,6 +45,7 @@
 
 /* Begin PBXFileReference section */
 		52292E6C2ABA50F4004406DD /* FeedDetailWebKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedDetailWebKit.swift; sourceTree = "<group>"; };
+		52292E6E2ABB64E8004406DD /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
 		522C7EDE2AB0788A00460EC7 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		522C7EE22AB0882500460EC7 /* FeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewCell.swift; sourceTree = "<group>"; };
 		522C7EE42AB0F08700460EC7 /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
@@ -227,6 +229,7 @@
 			children = (
 				526D558E2AA7D1480099E9E8 /* UIView+Extension.swift */,
 				527ABE412AAF8BBC00238857 /* UIViewController+Extension.swift */,
+				52292E6E2ABB64E8004406DD /* DateFormatter.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -366,6 +369,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52292E6F2ABB64E8004406DD /* DateFormatter.swift in Sources */,
 				527ABE3E2AAE017600238857 /* BookmarksViewController.swift in Sources */,
 				527ABE1F2AACEA2900238857 /* WelcomeViewController.swift in Sources */,
 				5233D6572AB4CFBA00A2349C /* FeedDetailViewController.swift in Sources */,
