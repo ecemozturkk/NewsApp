@@ -3,6 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -15,12 +16,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icons8-news-64" translatesAutoresizingMaskIntoConstraints="NO" id="x27-eD-Ebg">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="letter-n" translatesAutoresizingMaskIntoConstraints="NO" id="x27-eD-Ebg">
                                 <rect key="frame" x="156" y="381" width="81" height="90"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" red="1" green="0.87304563680435132" blue="0.84846187160588227" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" name="launchBackground"/>
                         <constraints>
                             <constraint firstItem="x27-eD-Ebg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="156" id="8e3-hk-PN9"/>
                             <constraint firstItem="x27-eD-Ebg" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="c0z-4i-qqZ"/>
@@ -35,6 +36,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="icons8-news-64" width="64" height="64"/>
+        <image name="letter-n" width="512" height="512"/>
+        <namedColor name="launchBackground">
+            <color red="0.81568627450980391" green="0.87450980392156863" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>

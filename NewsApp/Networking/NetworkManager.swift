@@ -95,10 +95,8 @@ final class NetworkManager {
         return request
     }
     
-    // Setting the default as page one.
     func getArticles(passedInCategory: String, passedInPageNumber: String="1", _ completion: @escaping (Result<[Article]>) -> Void)  {
         let articleRequest = makeRequest(for: .category(categoryIn: passedInCategory, pageNumber: passedInPageNumber))
-        //print(articleRequest)
         
         let task = urlSession.dataTask(with: articleRequest) { (data, response, error) in
             // If error
@@ -124,16 +122,29 @@ final class NetworkManager {
                 return completion(Result.failure(EndPointError.couldNotParse))
             }
             
-            let articles = result.articles
+            // Modify content field here to remove the [+123 chars]
+            let modifiedArticles = result.articles.map { article -> Article in
+                var modifiedArticle = article
+                if var content = modifiedArticle.content {
+                    if let range = content.range(of: "\\[\\+\\d+ chars\\]", options: .regularExpression) {
+                        content.replaceSubrange(range, with: "SEE MORE")
+                    }
+                    modifiedArticle.content = content
+                }
+                return modifiedArticle
+            }
+            
+            let modifiedResult = ArticleList(articles: modifiedArticles)
             
             DispatchQueue.main.async {
-                completion(Result.success(articles))
+                completion(Result.success(modifiedResult.articles))
                 //print("Articles Count: \(result.articles.count)")
                 //print(result.articles)
             }
         }
         task.resume()
     }
+
     
     func getSearchArticles(passedInQuery: String, _ completion: @escaping (Result<[Article]>) -> Void)  {
         let articleRequest = makeRequest(for: .search(q: passedInQuery))

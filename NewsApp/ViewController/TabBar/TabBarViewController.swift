@@ -28,7 +28,7 @@ class TabBarViewController: UITabBarController {
         super.viewDidLoad()
         self.view.backgroundColor =  #colorLiteral(red: 0.737254902, green: 0.1294117647, blue: 0.2941176471, alpha: 1)
         // Navigation Bar Appearance
-        self.setNavBarAppearance(tintColor: .white, barColor: UIColor(#colorLiteral(red: 0.737254902, green: 0.1294117647, blue: 0.2941176471, alpha: 1)))
+        self.setNavBarAppearance(tintColor: .white, barColor: UIColor(named: "greenTheme")!)
 
         // Shadow Background View
         self.sideMenuShadowView = UIView(frame: self.view.bounds)

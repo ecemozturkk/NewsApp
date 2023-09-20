@@ -30,9 +30,9 @@ class OnboardingViewController: UIViewController {
         super.viewDidLoad()
         
         slides = [
-            OnboardingSlide(description: "Experience a variety of amazing dishes from different cultures around the world.", title: "Delicious Dishes", image: #imageLiteral(resourceName: "slide1")),
-            OnboardingSlide(description: "Our dishes are prepared by only the best.", title: "World-Class Chefs", image: #imageLiteral(resourceName: "slide1")),
-            OnboardingSlide(description: "Your orders will be delivered instantly irrespective of your location around the world.", title: "Instant World-Wide Delivery", image: #imageLiteral(resourceName: "slide1"))
+            OnboardingSlide(description: "Welcome to our news app, your go-to source for breaking news.", title: "Stay Informed. Anytime. Anywhere.", image: #imageLiteral(resourceName: "slide1")),
+            OnboardingSlide(description: "Unlock a personalized news experience that allows you to save news for later: Bookmark and revisit your favorite stories. ", title: "Your News, Your Way", image: #imageLiteral(resourceName: "slide1")),
+            OnboardingSlide(description: "Dive into a diverse world of news categories. Stay informed on a wide range of topics.", title: "Sport, Politics & Anything", image: #imageLiteral(resourceName: "slide1"))
         ]
         
         pageControl.numberOfPages = slides.count
