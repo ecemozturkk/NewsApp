@@ -18,6 +18,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         
+        
         // MARK: -remembering the current user
         let currentUser = Auth.auth().currentUser
         if currentUser != nil {
@@ -26,7 +27,33 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             window?.rootViewController = home
         }
         
-        guard let _ = (scene as? UIWindowScene) else { return }
+        guard let windowScene = (scene as? UIWindowScene) else { return }
+        
+        let hasAppBeenOpenedBefore = UserDefaults.standard.bool(forKey: "hasAppBeenOpenedBefore")
+           
+            let window = UIWindow(windowScene: windowScene)
+            
+            if hasAppBeenOpenedBefore {
+                // Kullanıcı daha önce uygulamayı açtı, ana ekrana geç
+                let storyboard = UIStoryboard(name: "Main", bundle: nil) // Storyboard adınızı burada değiştirin
+                let controller = storyboard.instantiateViewController(withIdentifier: "HomeNC") as! UINavigationController
+                controller.modalPresentationStyle = .fullScreen
+                controller.modalTransitionStyle = .flipHorizontal
+                window.rootViewController = controller
+            } else {
+                // Kullanıcı ilk kez uygulamayı açıyor, onboarding ekranını göster
+                let storyboard = UIStoryboard(name: "Main", bundle: nil) // Storyboard adınızı burada değiştirin
+                let onboardingController = storyboard.instantiateViewController(withIdentifier: "OnboardingViewController") as! OnboardingViewController
+                onboardingController.modalPresentationStyle = .fullScreen
+                onboardingController.modalTransitionStyle = .coverVertical
+                window.rootViewController = onboardingController
+
+                // Kullanıcının uygulamayı ilk kez açtığını kaydedin
+                UserDefaults.standard.set(true, forKey: "hasAppBeenOpenedBefore")
+            }
+            
+            self.window = window
+            window.makeKeyAndVisible()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
