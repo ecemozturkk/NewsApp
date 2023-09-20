@@ -65,10 +65,10 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="12" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XG8-By-0Mf">
-                    <rect key="frame" x="16" y="458" width="361" height="162"/>
+                    <rect key="frame" x="16" y="458" width="361" height="140"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="361" id="ASn-L9-bZD"/>
-                        <constraint firstAttribute="height" constant="162" id="JZO-8a-yH4"/>
+                        <constraint firstAttribute="height" constant="140" id="JZO-8a-yH4"/>
                     </constraints>
                     <string key="text">Rain wasn't the only thing that poured on the New York Giants Sunday night. Dallas Cowboys running back Tony Pollard jogged into the endzone on a one-yard touchdown run. Jogged. The scoreboard ballo… [+2994 chars]</string>
                     <fontDescription key="fontDescription" name="KohinoorBangla-Regular" family="Kohinoor Bangla" pointSize="17"/>
@@ -92,7 +92,7 @@
                     </constraints>
                 </imageView>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="g65-YX-joh">
-                    <rect key="frame" x="62" y="620" width="250" height="95"/>
+                    <rect key="frame" x="62" y="598" width="250" height="95"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bNt-SS-gdW">
                             <rect key="frame" x="0.0" y="0.0" width="250" height="40"/>

@@ -297,34 +297,34 @@
                                 <rect key="frame" x="0.0" y="103" width="393" height="666"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="bookmarkCell" rowHeight="115" id="SAy-oL-5Cl" customClass="BookmarksTableViewCell" customModule="NewsApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="393" height="115"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="bookmarkCell" rowHeight="325" id="SAy-oL-5Cl" customClass="BookmarksTableViewCell" customModule="NewsApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="325"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="SAy-oL-5Cl" id="f8d-vX-4iS">
-                                            <rect key="frame" x="0.0" y="0.0" width="393" height="115"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="325"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NCL-ZW-s47">
-                                                    <rect key="frame" x="162" y="47" width="42" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Uqd-hl-M5s">
+                                                    <rect key="frame" x="8" y="8" width="377" height="250"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="250" id="hfb-vj-HNZ"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NCL-ZW-s47">
+                                                    <rect key="frame" x="8" y="260" width="377" height="54"/>
+                                                    <fontDescription key="fontDescription" name="KohinoorBangla-Semibold" family="Kohinoor Bangla" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Uqd-hl-M5s">
-                                                    <rect key="frame" x="2" y="2" width="150" height="111"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="111" id="eCh-VK-YAn"/>
-                                                        <constraint firstAttribute="width" constant="150" id="sla-b6-hAy"/>
-                                                    </constraints>
-                                                </imageView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="NCL-ZW-s47" firstAttribute="leading" secondItem="Uqd-hl-M5s" secondAttribute="trailing" constant="10" id="9Rm-Ew-e4y"/>
-                                                <constraint firstItem="Uqd-hl-M5s" firstAttribute="leading" secondItem="f8d-vX-4iS" secondAttribute="leading" constant="2" id="Pv7-9p-ZxV"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="NCL-ZW-s47" secondAttribute="bottom" constant="36" id="SBH-1Y-naO"/>
-                                                <constraint firstAttribute="bottom" secondItem="Uqd-hl-M5s" secondAttribute="bottom" constant="2" id="dcy-vR-pfT"/>
-                                                <constraint firstItem="Uqd-hl-M5s" firstAttribute="top" secondItem="f8d-vX-4iS" secondAttribute="top" constant="2" id="gUf-RL-69i"/>
-                                                <constraint firstItem="NCL-ZW-s47" firstAttribute="top" secondItem="f8d-vX-4iS" secondAttribute="topMargin" constant="36" id="xhC-9X-Zxq"/>
+                                                <constraint firstItem="Uqd-hl-M5s" firstAttribute="top" secondItem="f8d-vX-4iS" secondAttribute="top" constant="8" id="23K-6o-3mV"/>
+                                                <constraint firstAttribute="trailing" secondItem="NCL-ZW-s47" secondAttribute="trailing" constant="8" id="BXn-4t-31h"/>
+                                                <constraint firstItem="Uqd-hl-M5s" firstAttribute="leading" secondItem="f8d-vX-4iS" secondAttribute="leading" constant="8" id="SDS-AD-5ay"/>
+                                                <constraint firstAttribute="trailing" secondItem="Uqd-hl-M5s" secondAttribute="trailing" constant="8" id="amh-PZ-cFc"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="NCL-ZW-s47" secondAttribute="bottom" id="goa-AC-mbz"/>
+                                                <constraint firstItem="NCL-ZW-s47" firstAttribute="top" secondItem="Uqd-hl-M5s" secondAttribute="bottom" constant="2" id="jJg-6d-bLM"/>
+                                                <constraint firstItem="NCL-ZW-s47" firstAttribute="leading" secondItem="f8d-vX-4iS" secondAttribute="leading" constant="8" id="ust-fU-Xq9"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
