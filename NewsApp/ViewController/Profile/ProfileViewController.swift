@@ -9,11 +9,17 @@ import UIKit
 import Firebase
 
 class ProfileViewController: UIViewController {
-
+    
+    
+    @IBOutlet weak var switchTheme: UISwitch!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        if #available(iOS 13.0, *) {
+            let darkMode = UserDefaults.standard.bool(forKey: "darkMode")
+            switchTheme.isOn = darkMode
+        }
     }
     
 
@@ -26,6 +32,28 @@ class ProfileViewController: UIViewController {
             self.present(welcome, animated: true, completion: nil)
         } catch {
             print("logout error")
+        }
+    }
+    
+    @IBAction func switchThemeValueChanged(_ sender: UISwitch) {
+        if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
+           let appDelegate = windowScene.windows.first {
+            UserDefaults.standard.set(sender.isOn, forKey: "darkMode")
+            if sender.isOn {
+                appDelegate.overrideUserInterfaceStyle = .dark
+            } else {
+                appDelegate.overrideUserInterfaceStyle = .light
+            }
+            
+            if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
+               let appDelegate = windowScene.windows.first {
+                UserDefaults.standard.set(sender.isOn, forKey: "darkMode")
+                if sender.isOn {
+                    appDelegate.overrideUserInterfaceStyle = .dark
+                } else {
+                    appDelegate.overrideUserInterfaceStyle = .light
+                }
+            }
         }
     }
 }

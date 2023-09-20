@@ -14,41 +14,51 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        // Firebase ile giriş yapmış kullanıcıyı kontrol et
-        if Auth.auth().currentUser != nil {
-            // Kullanıcı giriş yapmış, TabBarViewController'ı göster
-            let storyboard = UIStoryboard(name: "Home", bundle: nil) // Storyboard adınızı burada değiştirin
-            let tabBarController = storyboard.instantiateViewController(withIdentifier: "HomeVC") as! TabBarViewController
-            window?.rootViewController = tabBarController
-        } else {
-            // Kullanıcı giriş yapmamış, onboarding veya giriş ekranını göster
-            let hasAppBeenOpenedBefore = UserDefaults.standard.bool(forKey: "hasAppBeenOpenedBefore")
-            
-            let window = UIWindow(windowScene: scene as! UIWindowScene) // Daha önceki kodunuzu kullanabilirsiniz
-            
-            if hasAppBeenOpenedBefore {
-                // Kullanıcı daha önce uygulamayı açtı, ana ekrana geç
-                let storyboard = UIStoryboard(name: "Main", bundle: nil) // Storyboard adınızı burada değiştirin
-                let controller = storyboard.instantiateViewController(withIdentifier: "HomeNC") as! UINavigationController
-                controller.modalPresentationStyle = .fullScreen
-                controller.modalTransitionStyle = .flipHorizontal
-                window.rootViewController = controller
+        // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
+        // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
+        // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
+        guard let windowScene = (scene as? UIWindowScene) else { return }
+        
+        let screenMode = UserDefaults.standard.bool(forKey: "darkMode")
+        if let appDelegate = windowScene.windows.first {
+            if screenMode {
+                appDelegate.overrideUserInterfaceStyle = .dark
             } else {
-                // Kullanıcı ilk kez uygulamayı açıyor, onboarding ekranını göster
-                let storyboard = UIStoryboard(name: "Main", bundle: nil) // Storyboard adınızı burada değiştirin
-                let onboardingController = storyboard.instantiateViewController(withIdentifier: "OnboardingViewController") as! OnboardingViewController
-                onboardingController.modalPresentationStyle = .fullScreen
-                onboardingController.modalTransitionStyle = .coverVertical
-                window.rootViewController = onboardingController
-
-                // Kullanıcının uygulamayı ilk kez açtığını kaydedin
-                UserDefaults.standard.set(true, forKey: "hasAppBeenOpenedBefore")
+                appDelegate.overrideUserInterfaceStyle = .light
             }
             
-            self.window = window
-            window.makeKeyAndVisible()
+            // Firebase ile giriş yapmış kullanıcıyı kontrol et
+            if Auth.auth().currentUser != nil {
+                // Kullanıcı giriş yapmış, TabBarViewController'ı göster
+                let storyboard = UIStoryboard(name: "Home", bundle: nil) // Storyboard adınızı burada değiştirin
+                let tabBarController = storyboard.instantiateViewController(withIdentifier: "HomeVC") as! TabBarViewController
+                appDelegate.rootViewController = tabBarController
+            } else {
+                // Kullanıcı giriş yapmamış, onboarding veya giriş ekranını göster
+                let hasAppBeenOpenedBefore = UserDefaults.standard.bool(forKey: "hasAppBeenOpenedBefore")
+                
+                if hasAppBeenOpenedBefore {
+                    // Kullanıcı daha önce uygulamayı açtı, ana ekrana geç
+                    let storyboard = UIStoryboard(name: "Main", bundle: nil) // Storyboard adınızı burada değiştirin
+                    let controller = storyboard.instantiateViewController(withIdentifier: "HomeNC") as! UINavigationController
+                    controller.modalPresentationStyle = .fullScreen
+                    controller.modalTransitionStyle = .flipHorizontal
+                    appDelegate.rootViewController = controller
+                } else {
+                    // Kullanıcı ilk kez uygulamayı açıyor, onboarding ekranını göster
+                    let storyboard = UIStoryboard(name: "Main", bundle: nil) // Storyboard adınızı burada değiştirin
+                    let onboardingController = storyboard.instantiateViewController(withIdentifier: "OnboardingViewController") as! OnboardingViewController
+                    onboardingController.modalPresentationStyle = .fullScreen
+                    onboardingController.modalTransitionStyle = .coverVertical
+                    appDelegate.rootViewController = onboardingController
+                    
+                    // Kullanıcının uygulamayı ilk kez açtığını kaydedin
+                    UserDefaults.standard.set(true, forKey: "hasAppBeenOpenedBefore")
+                }
+            }
         }
     }
+
 
     
     func sceneDidDisconnect(_ scene: UIScene) {

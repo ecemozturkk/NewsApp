@@ -17,7 +17,7 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ytL-Cl-JWT">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" name="lightGreenTheme"/>
+                        <color key="backgroundColor" name="tabbarColor"/>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
                                 <color key="value" name="greenTheme"/>
@@ -95,8 +95,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" placeholder="Search for news.." translatesAutoresizingMaskIntoConstraints="NO" id="ZRB-b9-Bi2">
+                            <searchBar contentMode="redraw" text="" placeholder="Search for news.." translatesAutoresizingMaskIntoConstraints="NO" id="ZRB-b9-Bi2">
                                 <rect key="frame" x="0.0" y="103" width="393" height="56"/>
+                                <color key="backgroundColor" name="colorBackground"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <outlet property="delegate" destination="R3Y-2h-Xoq" id="ft2-y9-vpG"/>
@@ -104,7 +105,8 @@
                             </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="psY-ZF-gMx">
                                 <rect key="frame" x="0.0" y="159" width="393" height="610"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" name="colorBackground"/>
+                                <color key="sectionIndexBackgroundColor" name="colorBackground"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="feedCell" rowHeight="113" id="9RT-ca-dSI" userLabel="FeedCell" customClass="FeedTableViewCell" customModule="NewsApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="393" height="113"/>
@@ -120,7 +122,7 @@
                                                         <constraint firstAttribute="width" constant="208" id="sq2-lp-Qfr"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="KohinoorBangla-Regular" family="Kohinoor Bangla" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" name="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3DK-rk-pJl">
@@ -149,6 +151,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <color key="backgroundColor" name="colorBackground"/>
                                             <constraints>
                                                 <constraint firstAttribute="bottom" secondItem="3DK-rk-pJl" secondAttribute="bottom" constant="5" id="0WN-jc-MWo"/>
                                                 <constraint firstItem="VMX-gI-c2L" firstAttribute="leading" secondItem="17N-B2-69l" secondAttribute="trailing" constant="3" id="4f2-K4-xTq"/>
@@ -161,6 +164,7 @@
                                                 <constraint firstItem="VMX-gI-c2L" firstAttribute="top" secondItem="lCr-9G-4nO" secondAttribute="bottom" constant="8" id="u4F-fO-M9E"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" name="colorBackground"/>
                                         <connections>
                                             <outlet property="headlineImage" destination="3DK-rk-pJl" id="U8r-T2-atU"/>
                                             <outlet property="headlineLabel" destination="lCr-9G-4nO" id="BRh-4Q-WHv"/>
@@ -171,7 +175,7 @@
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="RTF-DD-MiL"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="colorBackground"/>
                         <constraints>
                             <constraint firstItem="RTF-DD-MiL" firstAttribute="bottom" secondItem="psY-ZF-gMx" secondAttribute="bottom" id="0Yh-Vd-LTM"/>
                             <constraint firstItem="psY-ZF-gMx" firstAttribute="leading" secondItem="RTF-DD-MiL" secondAttribute="leading" id="5YT-2E-EdK"/>
@@ -251,6 +255,13 @@
                                     <action selector="logoutClicked:" destination="53p-aw-Esr" eventType="touchUpInside" id="pCZ-Ce-bTr"/>
                                 </connections>
                             </button>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1Ng-hh-pKH">
+                                <rect key="frame" x="172" y="353" width="49" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="switchThemeValueChanged:" destination="53p-aw-Esr" eventType="valueChanged" id="vRG-W8-62S"/>
+                                </connections>
+                            </switch>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="8qW-Xw-X5o"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -260,6 +271,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="XBp-4g-fKA"/>
+                    <connections>
+                        <outlet property="switchTheme" destination="1Ng-hh-pKH" id="fnr-TL-0lg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CNs-1x-Z2B" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -340,11 +354,17 @@
         <image name="newspaper.fill" catalog="system" width="128" height="112"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="square.grid.2x2" catalog="system" width="128" height="114"/>
+        <namedColor name="colorBackground">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="greenTheme">
             <color red="0.098039215686274508" green="0.59999999999999998" blue="0.55686274509803924" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="lightGreenTheme">
+        <namedColor name="tabbarColor">
             <color red="0.94117647058823528" green="0.98431372549019602" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="textColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

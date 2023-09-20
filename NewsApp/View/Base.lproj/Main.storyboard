@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="0hm-jM-bP1">
-                                <rect key="frame" x="50.000000000000014" y="414" width="236.33333333333337" height="24"/>
+                                <rect key="frame" x="78.333333333333329" y="414" width="236.33333333333337" height="24"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's dive in into your account!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="owz-5d-KEV">
                                         <rect key="frame" x="0.0" y="0.0" width="236.33333333333334" height="24"/>
@@ -45,16 +45,16 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lMJ-CV-E6f">
-                                <rect key="frame" x="80.666666666666686" y="344" width="175" height="50"/>
+                                <rect key="frame" x="109" y="344" width="175" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="7gP-Qz-fxS"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="45"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" name="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="soE-B7-SVm">
-                                <rect key="frame" x="18.666666666666657" y="676" width="299" height="36"/>
+                                <rect key="frame" x="47" y="676" width="299" height="36"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't have an account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FR8-QH-zSK">
                                         <rect key="frame" x="0.0" y="0.0" width="177" height="36"/>
@@ -79,7 +79,7 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wOK-Ee-Yps">
-                                <rect key="frame" x="80" y="608" width="176" height="45"/>
+                                <rect key="frame" x="80" y="608" width="233" height="45"/>
                                 <color key="backgroundColor" name="greenTheme"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="4DO-De-AOM"/>
@@ -101,7 +101,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="TzB-cN-R0b"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" name="colorBackground"/>
                         <constraints>
                             <constraint firstItem="soE-B7-SVm" firstAttribute="centerX" secondItem="TzB-cN-R0b" secondAttribute="centerX" id="1Gy-PR-gK5"/>
                             <constraint firstItem="0hm-jM-bP1" firstAttribute="centerY" secondItem="YuY-rr-c2w" secondAttribute="centerY" id="3M2-d1-j8I"/>
@@ -132,7 +132,7 @@
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="q1L-SR-yL1">
                                 <rect key="frame" x="0.0" y="59" width="393" height="627"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" name="colorBackground"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="aBb-dA-Faw">
                                     <size key="itemSize" width="413" height="667"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -149,14 +149,16 @@
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="L7G-rj-hxL">
                                                     <rect key="frame" x="0.0" y="0.0" width="413" height="524.33333333333337"/>
+                                                    <color key="backgroundColor" name="colorBackground"/>
                                                 </imageView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="QNG-rC-bCI">
                                                     <rect key="frame" x="16" y="524.33333333333337" width="381" height="126.66666666666663"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quick Delivery At Your Doorstep" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EaW-GR-sq7">
                                                             <rect key="frame" x="0.0" y="0.0" width="381" height="68.666666666666671"/>
+                                                            <color key="backgroundColor" name="colorBackground"/>
                                                             <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="31"/>
-                                                            <nil key="textColor"/>
+                                                            <color key="textColor" name="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home delivery and Online reservation systen for restaurants and cafes" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ot6-VD-ERO">
@@ -166,6 +168,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
+                                                    <color key="backgroundColor" name="colorBackground"/>
                                                     <constraints>
                                                         <constraint firstAttribute="bottom" secondItem="Ot6-VD-ERO" secondAttribute="bottom" id="GQw-N9-4JQ"/>
                                                         <constraint firstAttribute="trailing" secondItem="Ot6-VD-ERO" secondAttribute="trailing" id="PMl-iU-pH7"/>
@@ -227,7 +230,7 @@
                             </pageControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="rN2-VE-43E"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="colorBackground"/>
                         <constraints>
                             <constraint firstItem="5Du-xo-1i8" firstAttribute="centerX" secondItem="rN2-VE-43E" secondAttribute="centerX" id="56Y-aq-n1b"/>
                             <constraint firstItem="Kkj-ua-cro" firstAttribute="centerX" secondItem="rN2-VE-43E" secondAttribute="centerX" id="BI4-Wk-5oV"/>
@@ -322,7 +325,7 @@
                                     <constraint firstAttribute="height" constant="44" id="ZEC-9A-WWI"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="KohinoorBangla-Semibold" family="Kohinoor Bangla" pointSize="31"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" name="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter your email &amp; password to sign in." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2As-uR-uIw">
@@ -342,12 +345,12 @@
                                     <constraint firstAttribute="height" constant="21" id="cJa-15-2Gf"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" name="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="envelope.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="P5P-W0-ofN">
                                 <rect key="frame" x="16" y="402.33333333333331" width="34" height="30"/>
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" name="textColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="Pkl-Ao-APq"/>
                                     <constraint firstAttribute="width" constant="34" id="zf4-KE-N3p"/>
@@ -355,7 +358,7 @@
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lock.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="HFI-D9-MZd">
                                 <rect key="frame" x="16" y="504" width="34" height="32"/>
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" name="textColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="34" id="BdD-QZ-Fw7"/>
                                     <constraint firstAttribute="height" constant="34" id="qit-dS-sVw"/>
@@ -364,12 +367,12 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ldt-Ma-22U">
                                 <rect key="frame" x="58" y="470" width="80" height="21"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" name="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="QpL-Zd-t7A"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="colorBackground"/>
                         <constraints>
                             <constraint firstItem="P5P-W0-ofN" firstAttribute="top" secondItem="2As-uR-uIw" secondAttribute="bottom" constant="181" id="4uH-Kz-BpY"/>
                             <constraint firstItem="R8N-fC-cet" firstAttribute="top" secondItem="GV1-pb-DIS" secondAttribute="bottom" constant="13" id="5JZ-nz-dxf"/>
@@ -453,7 +456,7 @@
                                     <constraint firstAttribute="height" constant="43.670000000000002" id="f3L-av-MGw"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="KohinoorBangla-Semibold" family="Kohinoor Bangla" pointSize="31"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" name="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Be a member of our community and make your news experience unique." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uge-8y-1ks">
@@ -472,12 +475,12 @@
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="45" id="OJa-Ww-YT1"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" name="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="envelope.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Wbd-7z-va9">
                                 <rect key="frame" x="16" y="421.66666666666663" width="34" height="30"/>
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" name="textColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="34" id="KUY-1I-nvd"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="34" id="S15-FO-uIK"/>
@@ -488,12 +491,12 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qzY-7e-nRr">
                                 <rect key="frame" x="58" y="489.33333333333331" width="80" height="21"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" name="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lock.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="dOQ-v2-JUU">
                                 <rect key="frame" x="16" y="523.33333333333337" width="34" height="32"/>
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" name="textColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="dbk-zL-9Pi"/>
                                     <constraint firstAttribute="width" constant="34" id="xOS-1f-gAf"/>
@@ -511,7 +514,7 @@
                             </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="A3J-zh-Q6C"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="colorBackground"/>
                         <constraints>
                             <constraint firstItem="Wbd-7z-va9" firstAttribute="top" secondItem="ghh-1u-nX7" secondAttribute="top" constant="419.33333333333331" id="0XY-dG-xgK"/>
                             <constraint firstItem="Wbd-7z-va9" firstAttribute="top" secondItem="r7b-Xo-MKj" secondAttribute="top" id="2YY-6n-YKw"/>
@@ -555,12 +558,15 @@
         <image name="envelope.fill" catalog="system" width="128" height="93"/>
         <image name="letter-n" width="512" height="512"/>
         <image name="lock.fill" catalog="system" width="125" height="128"/>
+        <namedColor name="colorBackground">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="greenTheme">
             <color red="0.098039215686274508" green="0.59999999999999998" blue="0.55686274509803924" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <namedColor name="textColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemGray4Color">
             <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
