@@ -189,6 +189,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="feedTableView" destination="psY-ZF-gMx" id="xZI-cj-o9L"/>
+                        <outlet property="searchBar" destination="ZRB-b9-Bi2" id="2CW-W2-kRb"/>
                         <outlet property="sideMenuBtn" destination="c5c-vG-X52" id="Ylb-5E-ng0"/>
                     </connections>
                 </viewController>
@@ -234,7 +235,7 @@
             </objects>
             <point key="canvasLocation" x="4879" y="-425"/>
         </scene>
-        <!--PROFILE-->
+        <!--Profile View Controller-->
         <scene sceneID="NBC-2f-wYi">
             <objects>
                 <viewController id="53p-aw-Esr" customClass="ProfileViewController" customModule="NewsApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -258,7 +259,7 @@
                             <constraint firstItem="Syw-FK-dKZ" firstAttribute="centerX" secondItem="Nxn-Ir-gaT" secondAttribute="centerX" id="oTS-lm-4Ww"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="PROFILE" id="XBp-4g-fKA"/>
+                    <navigationItem key="navigationItem" id="XBp-4g-fKA"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CNs-1x-Z2B" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

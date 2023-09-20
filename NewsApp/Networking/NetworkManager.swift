@@ -95,45 +95,6 @@ final class NetworkManager {
         return request
     }
     
-//    // Setting the default as page one.
-//    func getArticles(passedInCategory: String, passedInPageNumber: String="1", _ completion: @escaping (Result<[Article]>) -> Void)  {
-//        let articleRequest = makeRequest(for: .category(categoryIn: passedInCategory, pageNumber: passedInPageNumber))
-//        //print(articleRequest)
-//
-//        let task = urlSession.dataTask(with: articleRequest) { (data, response, error) in
-//            // If error
-//            if let error = error {
-//                return completion(Result.failure(error))
-//            }
-//
-//            do {
-//                // Testing to see if got the proper json back
-//                // let jsonObject = try JSONSerialization.jsonObject(with: data!, options: [])
-//                _ = try JSONSerialization.jsonObject(with: data!, options: [])
-//
-//            } catch {
-//                print(error.localizedDescription)
-//            }
-//            // If there's data
-//            guard let safeData = data else {
-//                return completion(Result.failure(EndPointError.noData))
-//
-//            }
-//            // To decode data
-//            guard let result = try? JSONDecoder().decode(ArticleList.self, from: safeData) else {
-//                return completion(Result.failure(EndPointError.couldNotParse))
-//            }
-//
-//            let articles = result.articles
-//
-//            DispatchQueue.main.async {
-//                completion(Result.success(articles))
-//                //print("Articles Count: \(result.articles.count)")
-//                //print(result.articles)
-//            }
-//        }
-//        task.resume()
-//    }
     func getArticles(passedInCategory: String, passedInPageNumber: String="1", _ completion: @escaping (Result<[Article]>) -> Void)  {
         let articleRequest = makeRequest(for: .category(categoryIn: passedInCategory, pageNumber: passedInPageNumber))
         
@@ -166,7 +127,7 @@ final class NetworkManager {
                 var modifiedArticle = article
                 if var content = modifiedArticle.content {
                     if let range = content.range(of: "\\[\\+\\d+ chars\\]", options: .regularExpression) {
-                        content.removeSubrange(range)
+                        content.replaceSubrange(range, with: "SEE MORE")
                     }
                     modifiedArticle.content = content
                 }
