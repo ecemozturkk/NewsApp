@@ -8,21 +8,20 @@
 import Foundation
 
 final class NetworkManager {
-    //singleton
+    
+    // MARK: - Singleton
     static let shared = NetworkManager()
     
+    // MARK: - Properties
     let urlSession = URLSession.shared
     let baseURL = "https://newsapi.org/v2/"
     let APIKEY = "51cfe807e03943b881d6f9642810cae0"
     
-    
-    //Everything /v2/everything – search every article published by over 80,000 different sources large and small in the last 5 years. This endpoint is ideal for news analysis and article discovery.
-    //Top headlines /v2/top-headlines – returns breaking news headlines for countries, categories, and singular publishers. This is perfect for use with news tickers or anywhere you want to use live up-to-date news headlines.
+    // MARK: - EndPoints Enumeration
     enum EndPoints {
         case articles
         case category(categoryIn: String, pageNumber: String)
         case search(q: String)
-        
         
         func getPath() -> String {
             switch self {
@@ -33,60 +32,55 @@ final class NetworkManager {
             }
         }
         
-        // Get the HTTP Request Method
         func HTTPRequestMethod() -> String {
             return "GET"
         }
         
-        // Getting the header
         func getHeaders(apiKey: String) -> [String: String] {
-            
-            return ["Accept": "application/json",
-                    "Content-Type": "application/json",
-                    "Authorization": "X-Api-Key \(apiKey)",
-                    "Host": "newsapi.org"
+            return [
+                "Accept": "application/json",
+                "Content-Type": "application/json",
+                "Authorization": "X-Api-Key \(apiKey)",
+                "Host": "newsapi.org"
             ]
         }
         
-        // Get the parameters for the call
         func getParameters() -> [String: String] {
             switch self {
             case .articles:
-                return ["country": "us"
-                ]
+                return ["country": "us"]
             case .category(let categoryIn, let pageNum):
                 return ["country": "us",
                         "category": categoryIn,
-                        "page": pageNum
-                ]
+                        "page": pageNum]
             case .search(let qInput):
-                return ["q": qInput
-                ]
+                return ["q": qInput]
             }
         }
         
-        // Converting paramters to actual url string
         func parametersToString() -> String {
-            let parameterArray = getParameters().map{ key, value in
+            let parameterArray = getParameters().map { key, value in
                 return "\(key)=\(value)"
             }
-            
             return parameterArray.joined(separator: "&")
         }
     }
     
+    // MARK: - Result Enumeration
     enum Result<T> {
         case success(T?)
         case failure(Error)
     }
     
+    // MARK: - EndPointError Enumeration
     enum EndPointError: Error {
         case couldNotParse
         case noData
     }
     
+    // MARK: - Private Methods
     private func makeRequest(for endPoint: EndPoints) -> URLRequest {
-        let path = endPoint.getPath() // Get the first part of URL
+        let path = endPoint.getPath()
         let stringParams = endPoint.parametersToString()
         let fullURL = URL(string: baseURL.appending("\(path)?\(stringParams)"))
         var request = URLRequest(url: fullURL!)
@@ -95,7 +89,8 @@ final class NetworkManager {
         return request
     }
     
-    func getArticles(passedInCategory: String, passedInPageNumber: String="1", _ completion: @escaping (Result<[Article]>) -> Void)  {
+    // MARK: - Public Methods
+    func getArticles(passedInCategory: String, passedInPageNumber: String = "1", _ completion: @escaping (Result<[Article]>) -> Void) {
         let articleRequest = makeRequest(for: .category(categoryIn: passedInCategory, pageNumber: passedInPageNumber))
         
         let task = urlSession.dataTask(with: articleRequest) { (data, response, error) in
@@ -105,18 +100,16 @@ final class NetworkManager {
             }
             
             do {
-                // Testing to see if got the proper json back
-                // let jsonObject = try JSONSerialization.jsonObject(with: data!, options: [])
                 _ = try JSONSerialization.jsonObject(with: data!, options: [])
-                
             } catch {
                 print(error.localizedDescription)
             }
+            
             // If there's data
             guard let safeData = data else {
                 return completion(Result.failure(EndPointError.noData))
-                
             }
+            
             // To decode data
             guard let result = try? JSONDecoder().decode(ArticleList.self, from: safeData) else {
                 return completion(Result.failure(EndPointError.couldNotParse))
@@ -138,15 +131,12 @@ final class NetworkManager {
             
             DispatchQueue.main.async {
                 completion(Result.success(modifiedResult.articles))
-                //print("Articles Count: \(result.articles.count)")
-                //print(result.articles)
             }
         }
         task.resume()
     }
-
     
-    func getSearchArticles(passedInQuery: String, _ completion: @escaping (Result<[Article]>) -> Void)  {
+    func getSearchArticles(passedInQuery: String, _ completion: @escaping (Result<[Article]>) -> Void) {
         let articleRequest = makeRequest(for: .search(q: passedInQuery))
         
         let task = urlSession.dataTask(with: articleRequest) { (data, response, error) in
@@ -154,10 +144,11 @@ final class NetworkManager {
             if let error = error {
                 return completion(Result.failure(error))
             }
+            
             guard let safeData = data else {
                 return completion(Result.failure(EndPointError.noData))
-                
             }
+            
             guard let result = try? JSONDecoder().decode(ArticleList.self, from: safeData) else {
                 return completion(Result.failure(EndPointError.couldNotParse))
             }

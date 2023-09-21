@@ -9,10 +9,12 @@ import UIKit
 
 class OnboardingViewController: UIViewController {
     
+    // MARK: - IBOutlets
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var nextBtn: UIButton!
     @IBOutlet weak var pageControl: UIPageControl!
     
+    // MARK: - Properties
     var slides: [OnboardingSlide] = []
     
     var currentPage = 0 {
@@ -26,9 +28,11 @@ class OnboardingViewController: UIViewController {
         }
     }
     
+    // MARK: - Lifecycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // MARK: Initialize Onboarding Slides
         slides = [
             OnboardingSlide(description: "Welcome to our news app, your go-to source for breaking news.", title: "Stay Informed. Anytime. Anywhere.", image: #imageLiteral(resourceName: "slide1")),
             OnboardingSlide(description: "Unlock a personalized news experience that allows you to save news for later: Bookmark and revisit your favorite stories. ", title: "Your News, Your Way", image: #imageLiteral(resourceName: "slide1")),
@@ -36,9 +40,9 @@ class OnboardingViewController: UIViewController {
         ]
         
         pageControl.numberOfPages = slides.count
-        
     }
     
+    // MARK: - IBActions
     @IBAction func nextBtnClicked(_ sender: UIButton) {
         if currentPage == slides.count - 1 {
             let controller = storyboard?.instantiateViewController(identifier: "HomeNC") as! UINavigationController
@@ -54,7 +58,9 @@ class OnboardingViewController: UIViewController {
     
 }
 
+// MARK: - UICollectionViewDelegate and UICollectionViewDataSource
 extension OnboardingViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return slides.count
     }
@@ -75,6 +81,7 @@ extension OnboardingViewController: UICollectionViewDelegate, UICollectionViewDa
     }
 }
 
+// MARK: - UILabel Extension
 extension UILabel {
     
     func colorString(text: String?, coloredText: String?, color: UIColor? = .red) {

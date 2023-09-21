@@ -9,7 +9,6 @@ import UIKit
 
 class BookmarksTableViewCell: UITableViewCell {
     
-    //@IBOutlet weak var bookmarkImage: UIImageView!
     @IBOutlet weak var bookmarkLabel: UILabel!
     @IBOutlet weak var bookmarkImageView: UIImageView!
     

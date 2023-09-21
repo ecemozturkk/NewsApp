@@ -10,9 +10,11 @@ import WebKit
 
 class FeedDetailWebKit: UIViewController {
     
+    // MARK: - Properties
     var url: String? = nil
     var webPage = WKWebView()
     
+    // MARK: - View Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setUp()
@@ -21,6 +23,7 @@ class FeedDetailWebKit: UIViewController {
         }
     }
     
+    // MARK: - UI Setup
     func setUp() {
         view.addSubview(webPage)
         webPage.translatesAutoresizingMaskIntoConstraints = false
@@ -32,6 +35,7 @@ class FeedDetailWebKit: UIViewController {
         ])
     }
     
+    // MARK: - Web Page Loading
     func loadWebPage(_ urlString: String) {
         if let url = URL(string: urlString) {
             let request = URLRequest(url: url)
@@ -39,4 +43,3 @@ class FeedDetailWebKit: UIViewController {
         }
     }
 }
-
