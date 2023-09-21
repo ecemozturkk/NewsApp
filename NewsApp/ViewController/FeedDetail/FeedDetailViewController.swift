@@ -19,10 +19,10 @@ class FeedDetailViewController: UIViewController {
     @IBOutlet weak var addToBookmarksBtn: UIButton!
     
     
-    //MARK: - Properties
+    // MARK: - Properties
     var article: Article?
     
-    //MARK: - Initialization
+    // MARK: - Initialization
     init(article: Article) {
         self.article = article
         super.init(nibName: "FeedDetailViewController", bundle: nil)
@@ -32,22 +32,22 @@ class FeedDetailViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
-    //MARK: - View Lifecycle
+    // MARK: - View Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
     }
     
-    //MARK: - UI Configuration
+    // MARK: - UI Configuration
     func configureUI() {
         guard let article = article else { return }
-
+        
         titleLabel.text = article.title
         sourceLabel.text = article.source.name
         dateLabel.text = DateFormatter.formattedDate(from: article.publishedAt)
         contentLabel.text = article.content
         
-        //MARK: Load Image
+        // MARK: Load Image
         if let imageUrlString = article.urlToImage, let imageUrl = URL(string: imageUrlString) {
             imageView.kf.setImage(with: imageUrl)
         } else {
@@ -55,47 +55,42 @@ class FeedDetailViewController: UIViewController {
         }
     }
     
-    //MARK: - Button Actions
+    // MARK: - Button Actions
     @IBAction func seeMoreDetailClicked(_ sender: UIButton) {
         if let article = article, let url = article.url {
-             let webKitViewController = FeedDetailWebKit()
-             webKitViewController.url = url
-             navigationController?.pushViewController(webKitViewController, animated: true)
-         }
-     }
+            let webKitViewController = FeedDetailWebKit()
+            webKitViewController.url = url
+            navigationController?.pushViewController(webKitViewController, animated: true)
+        }
+    }
     
     @IBAction func addToBookmarksClicked(_ sender: UIButton) {
         guard let article = article else { return }
-            var bookmarks = UserDefaults.standard.array(forKey: "bookmarks") as? [[String: Any]] ?? []
-
-            if isArticleAlreadyBookmarked(article, in: bookmarks) {
-                makeAlert(titleInput: "Warning", messageInput: "New is already added in bookmarks.")
-                return
-            }
-
-            var articleData: [String: Any] = [
-                "title": article.title ?? "Article Title",
-                "sourceName": article.source.name ?? "Article Source Name",
-                "publishedAt": article.publishedAt ?? "Article Published At",
-                "content": article.content ?? "Article Content"
-            ]
-
-            // Görselin URL'sini kaydet
-            articleData["imageUrl"] = article.urlToImage ?? ""
-
-            bookmarks.append(articleData)
-
-            UserDefaults.standard.set(bookmarks, forKey: "bookmarks")
-            UserDefaults.standard.synchronize()
-
-            // Buton metnini güncelle
-            //addToBookmarksBtn.setTitle("Added to your bookmarks", for: .normal)
-
-            makeAlert(titleInput: "Success", messageInput: "New is added to your bookmarks.")
-}
+        var bookmarks = UserDefaults.standard.array(forKey: "bookmarks") as? [[String: Any]] ?? []
+        
+        if isArticleAlreadyBookmarked(article, in: bookmarks) {
+            makeAlert(titleInput: "Warning", messageInput: "News is already added to bookmarks.")
+            return
+        }
+        
+        var articleData: [String: Any] = [
+            "title": article.title ?? "Article Title",
+            "sourceName": article.source.name ?? "Article Source Name",
+            "publishedAt": article.publishedAt ?? "Article Published At",
+            "content": article.content ?? "Article Content"
+        ]
+        
+        articleData["imageUrl"] = article.urlToImage ?? ""
+        
+        bookmarks.append(articleData)
+        
+        UserDefaults.standard.set(bookmarks, forKey: "bookmarks")
+        UserDefaults.standard.synchronize()
+        
+        makeAlert(titleInput: "Success", messageInput: "News is added to your bookmarks.")
+    }
     
-    //MARK: - Helper Functions
-    // Haber daha önce eklenip eklenmediğini kontrol etmek için bir fonksiyon
+    // MARK: - Helper Functions
     func isArticleAlreadyBookmarked(_ article: Article, in bookmarks: [[String: Any]]) -> Bool {
         for bookmark in bookmarks {
             if let title = bookmark["title"] as? String, title == article.title {

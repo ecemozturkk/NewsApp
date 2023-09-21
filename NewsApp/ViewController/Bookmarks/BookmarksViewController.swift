@@ -10,92 +10,96 @@ import Kingfisher
 
 class BookmarksViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
+    // MARK: - Outlets
     @IBOutlet weak var tableView: UITableView!
     
-    var bookmarks: [[String: Any]] = [] // Verilerin saklandığı dizi
+    // MARK: - Properties
+    var bookmarks: [[String: Any]] = [] // An array to store the data
     
+    // MARK: - View Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tableView.delegate = self
         tableView.dataSource = self
         
-        
+        // Load bookmarks from UserDefaults if available
         if let storedBookmarks = UserDefaults.standard.array(forKey: "bookmarks") as? [[String: Any]] {
             bookmarks = storedBookmarks
         }
-        
-    
     }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        // Refresh bookmarks when the view appears
         if let storedBookmarks = UserDefaults.standard.array(forKey: "bookmarks") as? [[String: Any]] {
             bookmarks = storedBookmarks
         }
         
         tableView.reloadData()
     }
-
     
+    // MARK: - Table View Data Source
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return bookmarks.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "bookmarkCell", for: indexPath) as! BookmarksTableViewCell
-
-            let bookmark = bookmarks[indexPath.row]
-            cell.bookmarkLabel.text = bookmark["title"] as? String
-
-            // Haber görselini yükle
-            if let imageUrlString = bookmark["imageUrl"] as? String, let imageUrl = URL(string: imageUrlString) {
-                cell.bookmarkImageView.kf.setImage(with: imageUrl)
-            } else {
-                // Eğer görsel yoksa, varsayılan bir görsel veya placeholder görsel ayarlayabilirsiniz.
-                cell.bookmarkImageView.image = UIImage(named: "placeholderImage")
-            }
-
-            return cell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "bookmarkCell", for: indexPath) as! BookmarksTableViewCell
+        
+        let bookmark = bookmarks[indexPath.row]
+        cell.bookmarkLabel.text = bookmark["title"] as? String
+        
+        // Load the news image
+        if let imageUrlString = bookmark["imageUrl"] as? String, let imageUrl = URL(string: imageUrlString) {
+            cell.bookmarkImageView.kf.setImage(with: imageUrl)
+        } else {
+            // Set a default image or placeholder image if there is no image
+            cell.bookmarkImageView.image = UIImage(named: "placeholderImage")
+        }
+        
+        return cell
     }
+    
+    // MARK: - Table View Delegate
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-
-        // İndeks yeterince büyükse, bookmark dizisinden seçilen veriyi alın
+        
+        // If the index is valid, retrieve the selected bookmark from the array
         guard indexPath.row < bookmarks.count else {
             return
         }
-
+        
         let selectedBookmark = bookmarks[indexPath.row]
-
-        // Haber işaretiyle FeedDetailViewController'ı göster
+        
+        // Show the FeedDetailViewController with the selected bookmark
         showFeedDetailViewController(with: selectedBookmark)
     }
-
-
+    
+    // MARK: - Helper Functions
     func showFeedDetailViewController(with bookmark: [String: Any]) {
         guard let article = createArticleFromBookmark(bookmark) else {
             return
         }
-
+        
         let feedDetailVC = FeedDetailViewController(article: article)
         self.navigationController?.pushViewController(feedDetailVC, animated: true)
     }
-
-   
+    
     func createArticleFromBookmark(_ bookmark: [String: Any]) -> Article? {
         guard let title = bookmark["title"] as? String,
               let sourceName = bookmark["sourceName"] as? String,
               let publishedAt = bookmark["publishedAt"] as? String,
               let content = bookmark["content"] as? String,
               let urlToImage = bookmark["imageUrl"] as? String else {
-            return nil // Eğer gereken veriler eksikse, nil döndürün.
+            return nil // Return nil if required data is missing.
         }
         
-        // Source oluşturun
+        // Create a Source object
         let source = Source(id: nil, name: sourceName)
-
-        // Article nesnesini oluşturun ve doldurun
+        
+        // Create and populate an Article object
         let article = Article(
             source: source,
             author: nil,
@@ -109,6 +113,4 @@ class BookmarksViewController: UIViewController, UITableViewDataSource, UITableV
         
         return article
     }
-
-
 }
