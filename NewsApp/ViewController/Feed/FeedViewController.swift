@@ -24,8 +24,8 @@ class FeedViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        sideMenuBtn.target = revealViewController()
-        sideMenuBtn.action = #selector(revealViewController()?.revealSideMenu)
+        //sideMenuBtn.target = revealViewController()
+        //sideMenuBtn.action = #selector(revealViewController()?.revealSideMenu)
         
         configureTableView()
         fetchArticles()
