@@ -6,19 +6,22 @@
 //
 
 import UIKit
+import SideMenu
 
 
 class FeedViewController: UIViewController {
     
     
     @IBOutlet weak var feedTableView: UITableView! // headlinesTableView
-    @IBOutlet weak var sideMenuBtn: UIBarButtonItem!
     @IBOutlet weak var searchBar: UISearchBar!
     
     var headlines: [Article] = []
     var currentAPICallPage = 1
     var category: String? = nil
     var searchResults: [Article] = []
+    var searchQuery: String? = nil
+
+    var selectedCategory: String?
 
     
     override func viewDidLoad() {
@@ -29,6 +32,7 @@ class FeedViewController: UIViewController {
         
         configureTableView()
         fetchArticles()
+       
     }
     
     func configureTableView() {
@@ -41,7 +45,7 @@ class FeedViewController: UIViewController {
         // Specify the category and page number you want to fetch
         let category = "general"
         let pageNumber = "1"
-        
+
         if let query = searchQuery, !query.isEmpty {
             // Fetch articles based on the search query
             NetworkManager.shared.getSearchArticles(passedInQuery: query) { [weak self] result in
@@ -49,12 +53,12 @@ class FeedViewController: UIViewController {
                 case .success(let articles):
                     // Update the searchResults array with the fetched articles
                     self?.searchResults = articles!
-                    
+
                     // Reload the table view to display the search results
                     DispatchQueue.main.async {
                         self?.feedTableView.reloadData()
                     }
-                    
+
                 case .failure(let error):
                     print(error)
                 }
@@ -66,19 +70,28 @@ class FeedViewController: UIViewController {
                 case .success(let articles):
                     // Update the headlines array with the fetched articles
                     self?.headlines = articles!
-                    
+
                     // Reload the table view to display the data
                     DispatchQueue.main.async {
                         self?.feedTableView.reloadData()
                     }
-                    
+
                 case .failure(let error):
                     print(error)
                 }
             }
         }
     }
-
+    
+    @IBAction func categoriesButtonTapped(_ sender: UIBarButtonItem) {
+        // Define the menu
+        let menu = SideMenuNavigationController(rootViewController: BookmarksViewController() )
+        // SideMenuNavigationController is a subclass of UINavigationController, so do any additional configuration
+        // of it here like setting its viewControllers. If you're using storyboards, you'll want to do something like:
+        // let menu = storyboard!.instantiateViewController(withIdentifier: "RightMenu") as! SideMenuNavigationController
+        present(menu, animated: true, completion: nil)
+    }
+    
 }
 
 extension FeedViewController: UITableViewDelegate, UITableViewDataSource {
