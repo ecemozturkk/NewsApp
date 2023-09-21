@@ -27,3 +27,12 @@ public struct Source : Codable {
     let name: String?
 }
 
+public struct NewsSource: Decodable, Hashable {
+    let id: String?
+    let name: String?
+    let category: String?
+}
+
+public struct AllNewsSources: Decodable {
+    let sources: [NewsSource]
+}

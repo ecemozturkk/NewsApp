@@ -21,7 +21,6 @@
 		5233D6582AB4CFBA00A2349C /* FeedDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5233D6562AB4CFBA00A2349C /* FeedDetailViewController.xib */; };
 		5233D65A2AB8E2B900A2349C /* BookmarksTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5233D6592AB8E2B900A2349C /* BookmarksTableViewCell.swift */; };
 		52626CBF2ABC7AD40070DEC6 /* SideMenu in Frameworks */ = {isa = PBXBuildFile; productRef = 52626CBE2ABC7AD40070DEC6 /* SideMenu */; };
-		52626CC42ABC889F0070DEC6 /* NewSources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52626CC32ABC889F0070DEC6 /* NewSources.swift */; };
 		52626CC62ABC89210070DEC6 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52626CC52ABC89210070DEC6 /* CategoryViewController.swift */; };
 		52626CCC2ABC899C0070DEC6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52626CCB2ABC899C0070DEC6 /* Constants.swift */; };
 		52626CF42ABCA3610070DEC6 /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52626CF32ABCA3610070DEC6 /* CategoryTableViewCell.swift */; };
@@ -61,7 +60,6 @@
 		5233D6552AB4CFBA00A2349C /* FeedDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedDetailViewController.swift; sourceTree = "<group>"; };
 		5233D6562AB4CFBA00A2349C /* FeedDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedDetailViewController.xib; sourceTree = "<group>"; };
 		5233D6592AB8E2B900A2349C /* BookmarksTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarksTableViewCell.swift; sourceTree = "<group>"; };
-		52626CC32ABC889F0070DEC6 /* NewSources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewSources.swift; sourceTree = "<group>"; };
 		52626CC52ABC89210070DEC6 /* CategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		52626CCB2ABC899C0070DEC6 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		52626CF32ABCA3610070DEC6 /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
@@ -231,7 +229,6 @@
 			children = (
 				526D55902AA7D30D0099E9E8 /* OnboardingSlide.swift */,
 				522C7EE42AB0F08700460EC7 /* Article.swift */,
-				52626CC32ABC889F0070DEC6 /* NewSources.swift */,
 				52626CCB2ABC899C0070DEC6 /* Constants.swift */,
 			);
 			path = Models;
@@ -398,7 +395,6 @@
 				527ABE1F2AACEA2900238857 /* WelcomeViewController.swift in Sources */,
 				5233D6572AB4CFBA00A2349C /* FeedDetailViewController.swift in Sources */,
 				526D55682AA673A20099E9E8 /* AppDelegate.swift in Sources */,
-				52626CC42ABC889F0070DEC6 /* NewSources.swift in Sources */,
 				522C7EE32AB0882500460EC7 /* FeedTableViewCell.swift in Sources */,
 				5233D65A2AB8E2B900A2349C /* BookmarksTableViewCell.swift in Sources */,
 				52292E6D2ABA50F4004406DD /* FeedDetailWebKit.swift in Sources */,

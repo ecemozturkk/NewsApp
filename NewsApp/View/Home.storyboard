@@ -50,7 +50,7 @@
                         <userDefinedRuntimeAttribute type="boolean" keyPath="leftSide" value="YES"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
-                        <segue destination="gqN-IJ-FG3" kind="relationship" relationship="rootViewController" id="YPO-9X-zI5"/>
+                        <segue destination="gqN-IJ-FG3" kind="relationship" relationship="rootViewController" id="8TE-aN-hdm"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sQR-Tc-OqW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -397,7 +397,7 @@
             </objects>
             <point key="canvasLocation" x="4096.9465648854957" y="335.91549295774649"/>
         </scene>
-        <!--Category View Controller-->
+        <!--Item-->
         <scene sceneID="x1M-6U-piT">
             <objects>
                 <viewController id="gqN-IJ-FG3" customClass="CategoryViewController" customModule="NewsApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -444,6 +444,7 @@
                             <constraint firstItem="BK1-zy-UsP" firstAttribute="top" secondItem="pro-a5-YhA" secondAttribute="top" id="whR-P9-PdL"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="MIe-P9-nNQ"/>
                     <navigationItem key="navigationItem" id="8xR-LH-g8R"/>
                     <connections>
                         <outlet property="categoryTableView" destination="BK1-zy-UsP" id="A7r-Iy-3FS"/>
@@ -451,7 +452,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6mI-fA-KqQ" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4979" y="-2006"/>
+            <point key="canvasLocation" x="4927" y="-2006"/>
         </scene>
     </scenes>
     <resources>

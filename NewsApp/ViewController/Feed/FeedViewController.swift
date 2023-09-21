@@ -9,7 +9,7 @@ import UIKit
 import SideMenu
 
 
-class FeedViewController: UIViewController {
+class FeedViewController: UIViewController, CategorySelectionDelegate {
     
     
     @IBOutlet weak var feedTableView: UITableView! // headlinesTableView
@@ -32,8 +32,28 @@ class FeedViewController: UIViewController {
         
         configureTableView()
         fetchArticles()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(handleCategorySelection(_:)), name: NSNotification.Name("CategorySelectionNotification"), object: nil)
+
        
     }
+    
+    @objc func handleCategorySelection(_ notification: Notification) {
+        if let selectedCategory = notification.object as? String {
+            // Seçilen kategori bilgisini aldık, şimdi güncelleme işlemlerini yapabiliriz
+            updateFeedForCategory(selectedCategory)
+        }
+    }
+    
+    func didSelectCategory(_ category: String) {
+            updateFeedForCategory(category)
+        }
+    
+    func updateFeedForCategory(_ category: String) {
+        self.selectedCategory = category
+        fetchArticles()
+    }
+
     
     func configureTableView() {
         view.addSubview(feedTableView)
@@ -43,7 +63,7 @@ class FeedViewController: UIViewController {
     
     func fetchArticles(searchQuery: String? = nil) {
         // Specify the category and page number you want to fetch
-        let category = "general"
+        let category = selectedCategory ?? "general"
         let pageNumber = "1"
 
         if let query = searchQuery, !query.isEmpty {
