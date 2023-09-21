@@ -14,6 +14,7 @@
         <scene sceneID="LaL-7d-1fo">
             <objects>
                 <tabBarController restorationIdentifier="HomeVC" storyboardIdentifier="HomeVC" modalPresentationStyle="fullScreen" id="G8B-9I-Fgh" customClass="TabBarViewController" customModule="NewsApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="jEP-PX-KRa"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ytL-Cl-JWT">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -36,6 +37,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7fu-gU-Mja" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4097" y="-1204"/>
+        </scene>
+        <!--Side Menu Navigation Controller-->
+        <scene sceneID="wut-3Z-h4r">
+            <objects>
+                <navigationController id="xM0-Ti-hle" customClass="SideMenuNavigationController" customModule="SideMenu" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="H8y-tv-meL">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="leftSide" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <segue destination="gqN-IJ-FG3" kind="relationship" relationship="rootViewController" id="YPO-9X-zI5"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sQR-Tc-OqW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4097" y="-2005"/>
         </scene>
         <!--Side Menu View Controller-->
         <scene sceneID="3XY-Zt-G1k">
@@ -78,6 +98,9 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="6G2-tK-fWY">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="R3Y-2h-Xoq" kind="relationship" relationship="rootViewController" id="gpG-RJ-kUY"/>
@@ -176,7 +199,7 @@
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="RTF-DD-MiL"/>
-                        <color key="backgroundColor" name="colorBackground"/>
+                        <color key="backgroundColor" name="greenTheme"/>
                         <constraints>
                             <constraint firstItem="RTF-DD-MiL" firstAttribute="bottom" secondItem="psY-ZF-gMx" secondAttribute="bottom" id="0Yh-Vd-LTM"/>
                             <constraint firstItem="psY-ZF-gMx" firstAttribute="leading" secondItem="RTF-DD-MiL" secondAttribute="leading" id="5YT-2E-EdK"/>
@@ -188,14 +211,17 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="NEWS" id="X58-7N-qaW">
-                        <barButtonItem key="leftBarButtonItem" title="Item" image="square.grid.2x2" catalog="system" id="c5c-vG-X52">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="square.grid.2x2.fill" catalog="system" id="S5y-Nu-Tas">
+                            <color key="tintColor" name="lightGreenTheme"/>
+                            <connections>
+                                <action selector="categoriesButtonTapped:" destination="R3Y-2h-Xoq" id="CkG-Ib-O7F"/>
+                                <segue destination="xM0-Ti-hle" kind="presentation" id="rMO-wk-4uf"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="feedTableView" destination="psY-ZF-gMx" id="xZI-cj-o9L"/>
                         <outlet property="searchBar" destination="ZRB-b9-Bi2" id="2CW-W2-kRb"/>
-                        <outlet property="sideMenuBtn" destination="c5c-vG-X52" id="Ylb-5E-ng0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aHU-el-4EN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -212,6 +238,9 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="rzv-Q2-ywK">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="f3r-Zz-gzC" kind="relationship" relationship="rootViewController" id="MR5-I5-ruc"/>
@@ -231,6 +260,9 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="49n-xQ-ixK">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="53p-aw-Esr" kind="relationship" relationship="rootViewController" id="Jmj-F6-CFC"/>
@@ -348,7 +380,7 @@
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ecg-hQ-BEk"/>
-                        <color key="backgroundColor" name="colorBackground"/>
+                        <color key="backgroundColor" name="greenTheme"/>
                         <constraints>
                             <constraint firstItem="RRP-Ps-sqQ" firstAttribute="leading" secondItem="ecg-hQ-BEk" secondAttribute="leading" id="550-Km-lc1"/>
                             <constraint firstItem="ecg-hQ-BEk" firstAttribute="trailing" secondItem="RRP-Ps-sqQ" secondAttribute="trailing" id="haC-6J-BJX"/>
@@ -365,18 +397,77 @@
             </objects>
             <point key="canvasLocation" x="4096.9465648854957" y="335.91549295774649"/>
         </scene>
+        <!--Category View Controller-->
+        <scene sceneID="x1M-6U-piT">
+            <objects>
+                <viewController id="gqN-IJ-FG3" customClass="CategoryViewController" customModule="NewsApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="adU-KK-FrZ">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="BK1-zy-UsP">
+                                <rect key="frame" x="0.0" y="56" width="393" height="786"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="categoryCell" id="0FT-yj-Obq" customClass="CategoryTableViewCell" customModule="NewsApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0FT-yj-Obq" id="j34-aT-l0M">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G6W-S5-RB8">
+                                                    <rect key="frame" x="331" y="11" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="G6W-S5-RB8" firstAttribute="trailing" secondItem="j34-aT-l0M" secondAttribute="trailingMargin" id="KJ4-JE-EcG"/>
+                                                <constraint firstItem="G6W-S5-RB8" firstAttribute="top" secondItem="j34-aT-l0M" secondAttribute="topMargin" id="Mwr-Zz-JAC"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="categoryNameLabel" destination="G6W-S5-RB8" id="C22-HT-O1r"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="pro-a5-YhA"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="pro-a5-YhA" firstAttribute="bottom" secondItem="BK1-zy-UsP" secondAttribute="bottom" id="0im-EO-l03"/>
+                            <constraint firstItem="BK1-zy-UsP" firstAttribute="leading" secondItem="pro-a5-YhA" secondAttribute="leading" id="Gth-nk-PY7"/>
+                            <constraint firstItem="pro-a5-YhA" firstAttribute="trailing" secondItem="BK1-zy-UsP" secondAttribute="trailing" id="NVA-kZ-x3B"/>
+                            <constraint firstItem="BK1-zy-UsP" firstAttribute="top" secondItem="pro-a5-YhA" secondAttribute="top" id="whR-P9-PdL"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="8xR-LH-g8R"/>
+                    <connections>
+                        <outlet property="categoryTableView" destination="BK1-zy-UsP" id="A7r-Iy-3FS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6mI-fA-KqQ" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4979" y="-2006"/>
+        </scene>
     </scenes>
     <resources>
         <image name="bookmark.square" catalog="system" width="128" height="114"/>
         <image name="newspaper" catalog="system" width="128" height="111"/>
         <image name="newspaper.fill" catalog="system" width="128" height="112"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
-        <image name="square.grid.2x2" catalog="system" width="128" height="114"/>
+        <image name="square.grid.2x2.fill" catalog="system" width="128" height="114"/>
         <namedColor name="colorBackground">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="greenTheme">
             <color red="0.098039215686274508" green="0.59999999999999998" blue="0.55686274509803924" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="lightGreenTheme">
+            <color red="0.94117647058823528" green="0.98431372549019602" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="tabbarColor">
             <color red="0.94117647058823528" green="0.98431372549019602" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
