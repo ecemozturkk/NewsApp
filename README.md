@@ -1,10 +1,10 @@
 # News App 📰
 News Reader App is a powerful and user-friendly iOS application that allows you to stay updated with the latest news from various sources, powered by the [News API](https://newsapi.org/). It utilizes the MVVM architecture and incorporates several key technologies and features to enhance your news reading experience.
 ## Content
-- Technologies Used
-- [Features](https://github.com/ecemozturkk/MoviesApp#features)
-- [Video](https://github.com/ecemozturkk/MoviesApp#video)
-- [Screenshots](https://github.com/ecemozturkk/MoviesApp#screenshots)
+- [Technologies Used](https://github.com/ecemozturkk/NewsApp/tree/main#technologies-used)
+- [Features]((https://github.com/ecemozturkk/NewsApp/tree/main#features)
+- [Video](https://github.com/ecemozturkk/NewsApp/tree/main#video)
+- [Screenshots](https://github.com/ecemozturkk/NewsApp/tree/main#screenshots)
 
 ### Technologies Used
 - **MVVM Architecture:** The app is built using the Model-View-ViewModel (MVVM) architecture, separating the data, user interface, and business logic. This ensures a clean and maintainable codebase.
